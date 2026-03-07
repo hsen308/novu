@@ -415,16 +415,8 @@ body.hovering #cur-ring{width:0;height:0;opacity:0;}
 .work-card{
   flex-shrink:0;width:480px;height:600px;
   position:relative;overflow:hidden;background:var(--card);
-  display:block; text-decoration:none;
 }
 .work-card:first-child{width:640px;}
-
-@media(max-width: 768px){
-  .work-card, .work-card:first-child { width: 85vw; height: 480px; }
-  .work-scroll-track { padding: 0 24px; }
-  .w-title { font-size: 20px; }
-  .work-info { padding: 24px; }
-}
 .work-img{
   width:100%;height:100%;
   transition:transform 0.7s var(--ease);
@@ -1057,50 +1049,11 @@ footer::before{
 
   <div class="work-scroll-track" id="work-track">
 
-    <!-- Bana Café — featured wide card -->
-    <a href="https://hsen308.github.io/bana-cafe/" target="_blank" class="work-card" style="width:640px;flex-shrink:0;">
-      <div class="work-img" style="position:absolute;inset:0;">
-        <img src="img-banacafe.png" alt="Bana Café" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+    <div class="work-card">
+      <div class="work-img">
         <div class="work-gradient"></div>
-      </div>
-      <div class="work-info">
-        <div class="w-cat">Restaurant · Full Website</div>
-        <div class="w-title">Bana Café</div>
-        <div class="w-desc">Bold terracotta branding for Hamra's community café — custom layout, gallery, menu &amp; location sections.</div>
-        <div class="w-link">View Live ↗</div>
-      </div>
-    </a>
-
-    <!-- Cafe Mate Coffee -->
-    <a href="https://hsen308.github.io/matecafe/" target="_blank" class="work-card" style="flex-shrink:0;">
-      <div class="work-img" style="position:absolute;inset:0;">
-        <img src="img-matecafe.png" alt="Cafe Mate Coffee" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-        <div class="work-gradient"></div>
-      </div>
-      <div class="work-info">
-        <div class="w-cat">Restaurant · Full Website</div>
-        <div class="w-title">Cafe Mate Coffee</div>
-        <div class="w-desc">Premium forest-green branding for a Batroun café — artisanal feel with animated hero, menu &amp; reserve system.</div>
-        <div class="w-link">View Live ↗</div>
-      </div>
-    </a>
-
-    <!-- Krema -->
-    <a href="https://hsen308.github.io/krema/" target="_blank" class="work-card" style="flex-shrink:0;">
-      <div class="work-img" style="position:absolute;inset:0;">
-        <img src="img-krema.png" alt="Krema" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-        <div class="work-gradient"></div>
-      </div>
-      <div class="work-info">
-        <div class="w-cat">Café · Premium Website</div>
-        <div class="w-title">Krema</div>
-        <div class="w-desc">Soft cream &amp; gold aesthetic for a premium coffee experience — elegant typography, gallery &amp; digital menu.</div>
-        <div class="w-link">View Live ↗</div>
-      </div>
-    </a>
-
-  <div class="drag-hint"><div class="drag-line"></div>Drag to explore</div>
-</section>
+        <svg width="100%" height="100%" viewBox="0 0 640 600" fill="none" style="position:absolute;inset:0;">
+          <rect width="640" height="600" fill="#0d0d08"/>
           <rect width="640" height="600" fill="url(#g1)" opacity="0.4"/>
           <defs><radialGradient id="g1" cx="70%" cy="30%"><stop offset="0%" stop-color="#c8ff00" stop-opacity="0.15"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
           <!-- Browser mockup -->
@@ -1698,6 +1651,15 @@ gsap.from('.work-card', {
   stagger: 0.1,
   scrollTrigger: { trigger: '#work', start: 'top 85%' }
 });
+
+// Contact big text
+gsap.fromTo('#contact .clip-reveal .clip-inner',
+  { y: '110%' },
+  { y: '0%', duration: 1.1, ease: 'power4.out',
+    stagger: 0.08,
+    scrollTrigger: { trigger: '#contact', start: 'top 75%' }
+  }
+);
 
 /* ─── PARALLAX HERO ─── */
 window.addEventListener('scroll', () => {
