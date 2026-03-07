@@ -415,8 +415,16 @@ body.hovering #cur-ring{width:0;height:0;opacity:0;}
 .work-card{
   flex-shrink:0;width:480px;height:600px;
   position:relative;overflow:hidden;background:var(--card);
+  display:block; text-decoration:none;
 }
 .work-card:first-child{width:640px;}
+
+@media(max-width: 768px){
+  .work-card, .work-card:first-child { width: 85vw; height: 480px; }
+  .work-scroll-track { padding: 0 24px; }
+  .w-title { font-size: 20px; }
+  .work-info { padding: 24px; }
+}
 .work-img{
   width:100%;height:100%;
   transition:transform 0.7s var(--ease);
@@ -1049,7 +1057,8 @@ footer::before{
 
   <div class="work-scroll-track" id="work-track">
 
-    <div class="work-card">
+    <!-- Mate Cafe — Browser mockup (wide) -->
+    <a href="https://hsen308.github.io/matecafe/" target="_blank" class="work-card" style="width:640px;flex-shrink:0;">
       <div class="work-img">
         <div class="work-gradient"></div>
         <svg width="100%" height="100%" viewBox="0 0 640 600" fill="none" style="position:absolute;inset:0;">
@@ -1063,137 +1072,77 @@ footer::before{
           <circle cx="102" cy="118" r="5" fill="#ff5f56" opacity="0.7"/>
           <circle cx="118" cy="118" r="5" fill="#ffbd2e" opacity="0.5"/>
           <circle cx="134" cy="118" r="5" fill="#27c93f" opacity="0.5"/>
-          <!-- Hero text inside browser -->
-          <text x="160" y="178" fill="#f0ede6" font-family="serif" font-size="28" font-style="italic" opacity="0.9">Bella Roma</text>
-          <text x="160" y="205" fill="#888" font-family="monospace" font-size="10">Authentic Italian Restaurant</text>
-          <rect x="160" y="220" width="80" height="24" rx="3" fill="#c8ff00" opacity="0.9"/>
-          <text x="172" y="236" fill="#080808" font-family="monospace" font-size="9" font-weight="bold">Reserve →</text>
-          <!-- Nav -->
-          <text x="340" y="172" fill="#666" font-family="monospace" font-size="8">Menu</text>
-          <text x="390" y="172" fill="#666" font-family="monospace" font-size="8">About</text>
-          <text x="440" y="172" fill="#666" font-family="monospace" font-size="8">Contact</text>
-          <!-- Image block -->
-          <rect x="400" y="155" width="140" height="100" rx="4" fill="#1a1a12" opacity="0.7"/>
-          <text x="470" y="210" text-anchor="middle" fill="#2a2a1a" font-family="serif" font-size="22" font-style="italic">🍝</text>
-          <!-- Content blocks -->
-          <rect x="160" y="280" width="420" height="1" fill="#1e1e1a"/>
-          <rect x="160" y="300" width="60" height="50" rx="3" fill="#161610"/>
-          <rect x="228" y="300" width="60" height="50" rx="3" fill="#161610"/>
-          <rect x="296" y="300" width="60" height="50" rx="3" fill="#161610"/>
-          <rect x="364" y="300" width="60" height="50" rx="3" fill="#161610"/>
+          <!-- Screenshot -> height of browser is 320, top bar is 36, so viewport is 284 -->
+          <clipPath id="bro-clip-1"><rect x="80" y="136" width="480" height="284"/></clipPath>
+          <image clip-path="url(#bro-clip-1)" x="80" y="136" width="480" height="284" preserveAspectRatio="xMidYTop slice" href="img-mate-desktop.png" />
         </svg>
       </div>
       <div class="work-info">
-        <div class="w-cat">Restaurant · Full Website + Menu</div>
-        <div class="w-title">Bella Roma</div>
-        <div class="w-desc">Authentic Italian restaurant with custom booking system, animated menu, and gallery section.</div>
-        <a href="#contact" class="w-link">Start Similar ↗</a>
+        <div class="w-cat">Restaurant · Full Website</div>
+        <div class="w-title">Cafe Mate Coffee</div>
+        <div class="w-desc">Premium forest-green branding for a Batroun café — artisanal feel with animated hero, menu, and reserve system.</div>
+        <div class="w-link">View Live ↗</div>
       </div>
-    </div>
+    </a>
 
-    <div class="work-card">
+    <!-- Bana Cafe — Phone mockup -->
+    <a href="https://hsen308.github.io/bana-cafe/" target="_blank" class="work-card" style="flex-shrink:0;">
       <div class="work-img">
         <div class="work-gradient"></div>
         <svg width="100%" height="100%" viewBox="0 0 480 600" fill="none" style="position:absolute;inset:0;">
           <rect width="480" height="600" fill="#080d10"/>
           <rect width="480" height="600" fill="url(#g2)" opacity="0.5"/>
-          <defs><radialGradient id="g2" cx="50%" cy="50%"><stop offset="0%" stop-color="#00ffcc" stop-opacity="0.08"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+          <defs><radialGradient id="g2" cx="50%" cy="50%"><stop offset="0%" stop-color="#ff6b35" stop-opacity="0.08"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
           <!-- Phone mockup -->
           <rect x="140" y="60" width="200" height="380" rx="24" fill="#0d1414" stroke="#1e2828" stroke-width="1"/>
+          <!-- Inner screen -->
           <rect x="152" y="80" width="176" height="340" rx="16" fill="#0a1212"/>
-          <!-- Status bar -->
-          <text x="165" y="100" fill="#4a6666" font-family="monospace" font-size="7">9:41</text>
-          <text x="295" y="100" fill="#4a6666" font-family="monospace" font-size="7">●●●</text>
-          <!-- Restaurant header -->
-          <text x="240" y="125" text-anchor="middle" fill="#f0ede6" font-family="monospace" font-size="13" font-weight="bold">寿司 KYO</text>
-          <text x="240" y="140" text-anchor="middle" fill="#4a6666" font-family="monospace" font-size="7">Omakase Experience</text>
-          <rect x="152" y="148" width="176" height="1" fill="#1e2828"/>
-          <!-- Menu items -->
-          <rect x="162" y="158" width="156" height="38" rx="4" fill="#0f1818"/>
-          <text x="174" y="175" fill="#f0ede6" font-family="monospace" font-size="9">Toro Nigiri</text>
-          <text x="174" y="188" fill="#4a6666" font-family="monospace" font-size="7">Premium bluefin tuna</text>
-          <text x="294" y="182" fill="#00ffcc" font-family="monospace" font-size="9" opacity="0.8">$28</text>
-          <rect x="162" y="202" width="156" height="38" rx="4" fill="#0a1212" stroke="#1a2a2a" stroke-width="1"/>
-          <text x="174" y="219" fill="#f0ede6" font-family="monospace" font-size="9">Salmon Sashimi</text>
-          <text x="174" y="232" fill="#4a6666" font-family="monospace" font-size="7">Premium Atlantic</text>
-          <text x="296" y="226" fill="#00ffcc" font-family="monospace" font-size="9" opacity="0.8">$22</text>
-          <rect x="162" y="246" width="156" height="38" rx="4" fill="#0a1212" stroke="#1a2a2a" stroke-width="1"/>
-          <text x="174" y="263" fill="#888" font-family="monospace" font-size="8">Dragon Roll</text>
-          <text x="296" y="268" fill="#4a6666" font-family="monospace" font-size="8">$18</text>
-          <!-- Bottom nav -->
-          <rect x="152" y="380" width="176" height="40" rx="0" fill="#0d1414"/>
-          <text x="186" y="405" fill="#4a6666" font-family="monospace" font-size="8">Home</text>
-          <text x="220" y="405" fill="#00ffcc" font-family="monospace" font-size="8" opacity="0.8">Menu</text>
-          <text x="258" y="405" fill="#4a6666" font-family="monospace" font-size="8">Book</text>
+          
+          <clipPath id="phone-clip"><rect x="152" y="80" width="176" height="340" rx="16"/></clipPath>
+          <image clip-path="url(#phone-clip)" x="152" y="80" width="176" height="340" preserveAspectRatio="xMidYTop slice" href="img-bana-mobile.png" />
+          
+          <!-- Status bar overlay -->
+          <text x="165" y="94" fill="#fff" font-family="monospace" font-size="7" style="text-shadow: 0 1px 2px rgba(0,0,0,0.5);">9:41</text>
+          <text x="295" y="94" fill="#fff" font-family="monospace" font-size="7" style="text-shadow: 0 1px 2px rgba(0,0,0,0.5);">●●●</text>
         </svg>
       </div>
       <div class="work-info">
-        <div class="w-cat">Restaurant · Dark Theme + Digital Menu</div>
-        <div class="w-title">Sushi Kyo</div>
-        <div class="w-desc">Premium omakase restaurant with dark aesthetic and fully interactive mobile menu.</div>
-        <a href="#contact" class="w-link">Start Similar ↗</a>
+        <div class="w-cat">Restaurant · Full Website</div>
+        <div class="w-title">Bana Café</div>
+        <div class="w-desc">Bold terracotta branding for Hamra's community café — custom layout, gallery, menu &amp; location sections.</div>
+        <div class="w-link">View Live ↗</div>
       </div>
-    </div>
+    </a>
 
-    <div class="work-card">
-      <div class="work-img">
-        <div class="work-gradient"></div>
-        <svg width="100%" height="100%" viewBox="0 0 480 600" fill="none" style="position:absolute;inset:0;">
-          <rect width="480" height="600" fill="#0d0808"/>
-          <rect width="480" height="600" fill="url(#g3)" opacity="0.5"/>
-          <defs><radialGradient id="g3" cx="30%" cy="40%"><stop offset="0%" stop-color="#ff6b35" stop-opacity="0.12"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
-          <text x="48" y="140" fill="#f0ede6" font-family="serif" font-size="56" font-style="italic" opacity="0.9">Alex</text>
-          <text x="48" y="200" fill="#f0ede6" font-family="serif" font-size="56" font-style="italic" opacity="0.9">Morin.</text>
-          <text x="48" y="228" fill="#444" font-family="monospace" font-size="10" letter-spacing="0.15em">UI/UX DESIGNER · BEIRUT</text>
-          <rect x="48" y="248" width="80" height="28" rx="2" fill="#ff6b35" opacity="0.9"/>
-          <text x="60" y="267" fill="#fff" font-family="monospace" font-size="9">WORK →</text>
-          <!-- Project thumbnails -->
-          <rect x="48" y="310" width="180" height="110" rx="4" fill="#1a0f0a"/>
-          <rect x="240" y="310" width="80" height="52" rx="4" fill="#1a0f0a"/>
-          <rect x="240" y="370" width="80" height="50" rx="4" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="0.8"/>
-          <text x="138" y="370" text-anchor="middle" fill="#2a1a10" font-family="serif" font-size="20" font-style="italic">Case Study</text>
-        </svg>
-      </div>
-      <div class="work-info">
-        <div class="w-cat">Portfolio · Personal Site</div>
-        <div class="w-title">Alex Morin</div>
-        <div class="w-desc">Designer portfolio with editorial layout, scroll animations, and interactive project showcases.</div>
-        <a href="#contact" class="w-link">Start Similar ↗</a>
-      </div>
-    </div>
-
-    <div class="work-card">
+    <!-- Krema — Browser mockup -->
+    <a href="https://hsen308.github.io/krema/" target="_blank" class="work-card" style="flex-shrink:0;">
       <div class="work-img">
         <div class="work-gradient"></div>
         <svg width="100%" height="100%" viewBox="0 0 480 600" fill="none" style="position:absolute;inset:0;">
           <rect width="480" height="600" fill="#07080d"/>
           <rect width="480" height="600" fill="url(#g4)" opacity="0.4"/>
-          <defs><radialGradient id="g4" cx="80%" cy="20%"><stop offset="0%" stop-color="#7c5cff" stop-opacity="0.12"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
-          <!-- Full page layout -->
-          <rect x="32" y="80" width="416" height="48" rx="4" fill="#0d0e18" stroke="#12131f" stroke-width="1"/>
-          <text x="52" y="109" fill="#f0ede6" font-family="serif" font-size="16" font-style="italic">Le Jardin</text>
-          <rect x="340" y="92" width="88" height="24" rx="3" fill="#7c5cff" opacity="0.8"/>
-          <text x="354" y="108" fill="#fff" font-family="monospace" font-size="8">RESERVE →</text>
-          <!-- Hero section -->
-          <rect x="32" y="140" width="416" height="200" rx="4" fill="#0d0e18"/>
-          <text x="240" y="228" text-anchor="middle" fill="#7c5cff" font-family="serif" font-size="40" font-style="italic" opacity="0.25">Jardin</text>
-          <text x="240" y="268" text-anchor="middle" fill="#f0ede6" font-family="serif" font-size="20" opacity="0.6">French Bistro · Beirut</text>
-          <!-- Menu preview -->
-          <rect x="32" y="356" width="130" height="80" rx="4" fill="#0d0e18"/>
-          <rect x="170" y="356" width="130" height="80" rx="4" fill="#7c5cff" opacity="0.1" stroke="#7c5cff" stroke-width="0.8"/>
-          <rect x="308" y="356" width="140" height="80" rx="4" fill="#0d0e18"/>
-          <text x="97" y="400" text-anchor="middle" fill="#333" font-family="serif" font-size="14" font-style="italic">Entrées</text>
-          <text x="235" y="400" text-anchor="middle" fill="#7c5cff" font-family="serif" font-size="14" font-style="italic" opacity="0.5">Plats</text>
-          <text x="378" y="400" text-anchor="middle" fill="#333" font-family="serif" font-size="14" font-style="italic">Desserts</text>
+          <defs><radialGradient id="g4" cx="80%" cy="20%"><stop offset="0%" stop-color="#e2cfad" stop-opacity="0.12"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+          
+          <!-- Browser mockup -->
+          <rect x="32" y="80" width="416" height="360" rx="6" fill="#0f0f0a" stroke="#1e1e1a" stroke-width="1"/>
+          <rect x="32" y="80" width="416" height="36" rx="6" fill="#161610" stroke="#1e1e1a" stroke-width="1"/>
+          <rect x="32" y="98" width="416" height="18" fill="#161610"/> <!-- remove bottom rx -->
+          <circle cx="54" cy="98" r="5" fill="#ff5f56" opacity="0.7"/>
+          <circle cx="70" cy="98" r="5" fill="#ffbd2e" opacity="0.5"/>
+          <circle cx="86" cy="98" r="5" fill="#27c93f" opacity="0.5"/>
+          
+          <!-- Screenshot -> height of browser is 360, top bar is 36, viewport is 324 -->
+          <clipPath id="bro-clip-2"><rect x="32" y="116" width="416" height="324"/></clipPath>
+          <image clip-path="url(#bro-clip-2)" x="32" y="116" width="416" height="324" preserveAspectRatio="xMidYTop slice" href="img-krema-desktop.png" />
         </svg>
       </div>
       <div class="work-info">
-        <div class="w-cat">Restaurant · French Theme</div>
-        <div class="w-title">Le Jardin</div>
-        <div class="w-desc">Elegant French bistro with purple accent palette, reservation system, and full digital menu.</div>
-        <a href="#contact" class="w-link">Start Similar ↗</a>
+        <div class="w-cat">Café · Premium Website</div>
+        <div class="w-title">Krema</div>
+        <div class="w-desc">Soft cream &amp; gold aesthetic for a premium coffee experience — elegant typography, gallery &amp; digital menu.</div>
+        <div class="w-link">View Live ↗</div>
       </div>
-    </div>
+    </a>
 
   </div>
   <div class="drag-hint"><div class="drag-line"></div>Drag to explore</div>
