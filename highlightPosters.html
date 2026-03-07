@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novu Studios — Highlight Posters</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@200;400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --lime: #c8ff00;
+  --dark: #080808;
+  --off: #f0ede6;
+}
+
+body {
+  background: #050505;
+  font-family: 'DM Sans', sans-serif;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: #222;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+h1 span { color: var(--lime); }
+
+/* poster wrapper */
+.poster-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+  align-items: flex-start;
+}
+
+.poster-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #222;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Each poster: 9:16 at 270x480 */
+.poster {
+  width: 270px;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* IG story top bar */
+.story-bar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.story-progress {
+  flex: 1;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+.story-progress-fill {
+  height: 100%;
+  width: 60%;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.story-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.story-name {
+  font-size: 9px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Novu logo mark small */
+.novu-mark {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.novu-mark-text {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--off);
+  letter-spacing: 0.1em;
+}
+
+/* ───────────────────────────
+   POSTER 1 — RESTAURANTS
+─────────────────────────── */
+.p-restaurants {
+  background: #0a0a0a;
+}
+
+.p-restaurants .bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200,255,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,255,0,0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.p-restaurants .lime-bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--lime);
+  box-shadow: 0 0 20px var(--lime);
+}
+
+.p-restaurants .content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 28px 24px;
+}
+
+.p-restaurants .big-icon {
+  position: absolute;
+  top: 80px;
+  right: -10px;
+  opacity: 0.07;
+}
+
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.poster-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  line-height: 0.92;
+  color: var(--off);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.poster-body {
+  font-size: 11px;
+  color: #444;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.poster-body strong { color: #666; font-weight: 400; }
+
+.lime-pill {
+  display: inline-block;
+  background: var(--lime);
+  color: #080808;
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  padding: 4px 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+/* ───────────────────────────
+   POSTER 2 — MENUS
+─────────────────────────── */
+.p-menus {
+  background: #f0ede6;
+}
+
+.p-menus .dark-block {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 55%;
+  background: #0a0a0a;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.p-menus .content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px;
+}
+
+.p-menus .top-content {
+  position: absolute;
+  top: 70px;
+  left: 24px;
+  right: 24px;
+}
+
+.p-menus .menu-showcase {
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+.menu-row:last-child { border-bottom: none; }
+.menu-item-name { font-size: 8px; color: #888; font-weight: 300; letter-spacing: 0.05em; }
+.menu-item-price { font-family: 'Space Mono', monospace; font-size: 8px; color: var(--lime); }
+
+.p-menus .poster-title { color: #0a0a0a; font-size: 44px; }
+.p-menus .tag { color: #888; }
+.p-menus .poster-body { color: #999; }
+
+/* ───────────────────────────
+   POSTER 3 — PORTFOLIO
+─────────────────────────── */
+.p-portfolio {
+  background: #080808;
+}
+
+.p-portfolio .accent-circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(200,255,0,0.06);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-portfolio .accent-circle-2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgba(200,255,0,0.04);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-portfolio .project-cards {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.proj-card {
+  background: #111;
+  border: 1px solid #1c1c1c;
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.proj-card.active { border-color: rgba(200,255,0,0.3); }
+
+.proj-name { font-size: 9px; color: #f0ede6; font-weight: 400; letter-spacing: 0.05em; }
+.proj-type { font-family: 'Space Mono', monospace; font-size: 7px; color: #333; }
+.proj-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--lime); }
+
+.p-portfolio .content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px;
+}
+
+/* ───────────────────────────
+   POSTER 4 — PROCESS
+─────────────────────────── */
+.p-process {
+  background: #0a0a0a;
+}
+
+.p-process .stripe {
+  position: absolute;
+  top: 0; bottom: 0;
+  right: 0;
+  width: 5px;
+  background: var(--lime);
+}
+
+.p-process .steps-visual {
+  position: absolute;
+  top: 78px;
+  left: 24px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+}
+
+.step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oxanium', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.step-num.active { background: var(--lime); color: #080808; }
+.step-num.inactive { background: #111; border: 1px solid #222; color: #333; }
+
+.step-connector { width: 1px; height: 20px; background: #1a1a1a; }
+
+.step-info { padding-top: 3px; }
+.step-title { font-size: 10px; color: #f0ede6; font-weight: 500; margin-bottom: 2px; letter-spacing: 0.02em; }
+.step-desc { font-size: 8px; color: #333; font-weight: 300; line-height: 1.5; }
+
+.p-process .content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px;
+}
+
+/* ───────────────────────────
+   POSTER 5 — REVIEWS
+─────────────────────────── */
+.p-reviews {
+  background: #f0ede6;
+}
+
+.p-reviews .top-block {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 42%;
+  background: #0a0a0a;
+}
+
+.p-reviews .quote-block {
+  position: absolute;
+  top: 56px;
+  left: 20px;
+  right: 20px;
+  background: #111;
+  border-left: 3px solid var(--lime);
+  padding: 14px 14px 14px 16px;
+  border-radius: 0 6px 6px 0;
+}
+
+.quote-text { font-size: 10px; color: #aaa; line-height: 1.6; font-style: italic; font-weight: 300; }
+.quote-author { font-family: 'Space Mono', monospace; font-size: 7px; color: #444; margin-top: 8px; letter-spacing: 0.1em; }
+
+.stars { color: var(--lime); font-size: 12px; margin-bottom: 6px; }
+
+.p-reviews .second-review {
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.review-2-stars { color: #0a0a0a; font-size: 10px; margin-bottom: 4px; }
+.review-2-text { font-size: 9px; color: #555; line-height: 1.6; font-style: italic; }
+.review-2-author { font-size: 8px; color: #aaa; margin-top: 6px; }
+
+.p-reviews .content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 22px 24px;
+}
+.p-reviews .poster-title { color: #0a0a0a; font-size: 44px; }
+.p-reviews .tag { color: #888; }
+
+/* ───────────────────────────
+   POSTER 6 — PRICING
+─────────────────────────── */
+.p-pricing {
+  background: var(--lime);
+}
+
+.p-pricing .tag { color: rgba(8,8,8,0.45); }
+.p-pricing .poster-title { color: #080808; font-size: 56px; }
+.p-pricing .poster-body { color: rgba(8,8,8,0.5); }
+
+.p-pricing .big-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 130px;
+  color: rgba(8,8,8,0.06);
+  position: absolute;
+  top: 60px;
+  right: -10px;
+  line-height: 1;
+}
+
+.p-pricing .pkg-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.pkg-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(8,8,8,0.08);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.pkg-name { font-size: 9px; color: #080808; font-weight: 500; letter-spacing: 0.05em; }
+.pkg-price { font-family: 'Oxanium', sans-serif; font-size: 11px; font-weight: 700; color: #080808; }
+
+.p-pricing .cta-bar {
+  background: #080808;
+  color: var(--lime);
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+}
+
+.p-pricing .content {
+  position: absolute;
+  bottom: 36px; left: 0; right: 0;
+  padding: 0 24px;
+}
+
+/* ───────────────────────────
+   POSTER 7 — BEHIND THE SCENES
+─────────────────────────── */
+.p-bts {
+  background: #080808;
+}
+
+.p-bts .editor-mock {
+  position: absolute;
+  top: 68px;
+  left: 18px;
+  right: 18px;
+  background: #0d1117;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.editor-topbar {
+  background: #161b22;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ed-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+.editor-body { padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; }
+
+.code-line {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  line-height: 1.6;
+  display: flex;
+  gap: 8px;
+}
+
+.ln { color: #21262d; min-width: 12px; }
+.kw { color: #ff7b72; }
+.fn { color: #d2a8ff; }
+.st { color: var(--lime); }
+.cm { color: #8b949e; }
+.nt { color: #79c0ff; }
+.at { color: #ffa657; }
+
+.p-bts .content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px;
+}
+
+/* ───────────────────────────
+   POSTER 8 — CONTACT
+─────────────────────────── */
+.p-contact {
+  background: #080808;
+}
+
+.p-contact .diagonal-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0a0a0a 60%, #0f1a00 100%);
+}
+
+.p-contact .glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,255,0,0.08) 0%, transparent 70%);
+  bottom: 100px;
+  right: -50px;
+}
+
+.p-contact .contact-cards {
+  position: absolute;
+  top: 76px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-card {
+  background: #0e0e0e;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-card.highlight-card { border-color: rgba(200,255,0,0.25); }
+
+.cc-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cc-icon.lime { background: var(--lime); }
+.cc-icon.dark { background: #1a1a1a; }
+
+.cc-info { display: flex; flex-direction: column; gap: 1px; }
+.cc-label { font-size: 7px; color: #333; letter-spacing: 0.15em; text-transform: uppercase; font-family: 'Space Mono', monospace; }
+.cc-value { font-size: 10px; color: #f0ede6; font-weight: 400; }
+
+.p-contact .content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px;
+}
+
+/* Bottom novu sig */
+.novu-sig {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0.35;
+}
+
+.novu-sig-text {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--off);
+  letter-spacing: 0.15em;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Novu <span>Studios</span> — Highlight Story Posters</h1>
+
+<!-- ROW 1 -->
+<div class="poster-row">
+
+  <!-- ① RESTAURANTS -->
+  <div>
+    <div class="poster p-restaurants">
+      <div class="bg-grid"></div>
+      <div class="lime-bar"></div>
+
+      <div class="story-bar">
+        <div class="story-progress"><div class="story-progress-fill"></div></div>
+        <div class="story-avatar">
+          <svg width="14" height="14" viewBox="0 0 110 110" fill="none"><circle cx="55" cy="55" r="52" fill="#111"/><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        </div>
+        <span class="story-name">novustudios</span>
+      </div>
+
+      <div class="big-icon">
+        <svg width="240" height="240" viewBox="0 0 100 100" fill="none">
+          <line x1="38" y1="10" x2="38" y2="90" stroke="#c8ff00" stroke-width="3"/>
+          <path d="M30 10 L30 50 Q38 58 46 50 L46 10" stroke="#c8ff00" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="60" y1="10" x2="60" y2="90" stroke="#c8ff00" stroke-width="3"/>
+          <path d="M60 10 Q72 20 72 38 L60 42" stroke="#c8ff00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="content">
+        <span class="tag">// Highlight</span>
+        <div class="poster-title">RESTAURANTS<br>CAFES</div>
+        <div class="poster-body">Custom websites built for restaurants — cafes —<strong>every theme unique,</strong> every design made to match your brand and vibe.</div>
+        <div class="lime-pill">View Projects →</div>
+      </div>
+
+      <div class="novu-sig">
+        <svg width="10" height="10" viewBox="0 0 110 110" fill="none"><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        <span class="novu-sig-text">NOVU</span>
+      </div>
+    </div>
+    <div class="poster-label">01 · Restaurants</div>
+  </div>
+
+  <!-- ② MENUS -->
+  <div>
+    <div class="poster p-menus">
+      <div class="dark-block"></div>
+
+      <div class="story-bar">
+        <div class="story-progress"><div class="story-progress-fill"></div></div>
+        <div class="story-avatar">
+          <svg width="14" height="14" viewBox="0 0 110 110" fill="none"><circle cx="55" cy="55" r="52" fill="#111"/><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        </div>
+        <span class="story-name">novustudios</span>
+      </div>
+
+      <div class="top-content">
+        <span class="tag" style="color:var(--lime)">// Digital Menus</span>
+        <div class="menu-showcase">
+          <div class="menu-row"><span class="menu-item-name">Margherita Pizza</span><span class="menu-item-price">$14</span></div>
+          <div class="menu-row"><span class="menu-item-name">Truffle Pasta</span><span class="menu-item-price">$22</span></div>
+          <div class="menu-row"><span class="menu-item-name">Grilled Salmon</span><span class="menu-item-price">$28</span></div>
+          <div class="menu-row"><span class="menu-item-name">Tiramisu</span><span class="menu-item-price">$9</span></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <span class="tag">From PDF to Web</span>
+        <div class="poster-title">DIG-<br>ITAL<br>MENUS</div>
+        <div class="poster-body" style="color:#888">Beautiful, mobile-friendly menus your customers can browse online — always up to date.</div>
+      </div>
+
+      <div class="novu-sig" style="opacity:0.2">
+        <svg width="10" height="10" viewBox="0 0 110 110" fill="none"><rect x="27" y="26" width="14" height="58" rx="2" fill="#111"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#111"/><line x1="41" y1="26" x2="69" y2="84" stroke="#333" stroke-width="12" stroke-linecap="round"/></svg>
+        <span class="novu-sig-text" style="color:#888">NOVU</span>
+      </div>
+    </div>
+    <div class="poster-label">02 · Menus</div>
+  </div>
+
+  <!-- ③ PORTFOLIO -->
+  <div>
+    <div class="poster p-portfolio">
+      <div class="accent-circle"></div>
+      <div class="accent-circle-2"></div>
+
+      <div class="story-bar">
+        <div class="story-progress"><div class="story-progress-fill"></div></div>
+        <div class="story-avatar">
+          <svg width="14" height="14" viewBox="0 0 110 110" fill="none"><circle cx="55" cy="55" r="52" fill="#111"/><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        </div>
+        <span class="story-name">novustudios</span>
+      </div>
+
+      <div class="project-cards">
+        <div class="proj-card active">
+          <div><div class="proj-name">Bella Roma</div><div class="proj-type">Restaurant · 2026</div></div>
+          <div class="proj-dot"></div>
+        </div>
+        <div class="proj-card">
+          <div><div class="proj-name">Sushi Kyo</div><div class="proj-type">Restaurant · 2026</div></div>
+          <div style="width:5px;height:5px;border-radius:50%;background:#222;"></div>
+        </div>
+        <div class="proj-card">
+          <div><div class="proj-name">Alex Morin</div><div class="proj-type">Portfolio · 2026</div></div>
+          <div style="width:5px;height:5px;border-radius:50%;background:#222;"></div>
+        </div>
+        <div class="proj-card">
+          <div><div class="proj-name">Le Petit Café</div><div class="proj-type">Restaurant · 2026</div></div>
+          <div style="width:5px;height:5px;border-radius:50%;background:#222;"></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <span class="tag">// All Work</span>
+        <div class="poster-title">PORT-<br>FOLIO</div>
+        <div class="poster-body">Every project crafted with its own identity — no templates, no shortcuts.</div>
+        <div class="lime-pill">See All →</div>
+      </div>
+
+      <div class="novu-sig">
+        <svg width="10" height="10" viewBox="0 0 110 110" fill="none"><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        <span class="novu-sig-text">NOVU</span>
+      </div>
+    </div>
+    <div class="poster-label">03 · Portfolio</div>
+  </div>
+
+</div>
+
+<!-- ROW 2 -->
+<div class="poster-row">
+
+  <!-- ④ PROCESS -->
+  <div>
+    <div class="poster p-process">
+      <div class="stripe"></div>
+
+      <div class="story-bar">
+        <div class="story-progress"><div class="story-progress-fill"></div></div>
+        <div class="story-avatar">
+          <svg width="14" height="14" viewBox="0 0 110 110" fill="none"><circle cx="55" cy="55" r="52" fill="#111"/><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        </div>
+        <span class="story-name">novustudios</span>
+      </div>
+
+      <div class="steps-visual">
+        <div class="step-item">
+          <div class="step-left">
+            <div class="step-num active">1</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-info">
+            <div class="step-title">Discovery Call</div>
+            <div class="step-desc">We talk about your vision, brand, and goals. Free, no commitment.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-left">
+            <div class="step-num active">2</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-info">
+            <div class="step-title">Design & Build</div>
+            <div class="step-desc">Custom design, built from scratch. You review and approve.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-left">
+            <div class="step-num active">3</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-info">
+            <div class="step-title">Launch</div>
+            <div class="step-desc">Your site goes live. Fast, tested, and mobile-ready.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-left">
+            <div class="step-num inactive">4</div>
+          </div>
+          <div class="step-info">
+            <div class="step-title" style="color:#333">Support</div>
+            <div class="step-desc">Ongoing updates and maintenance if you need it.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <span class="tag">// How It Works</span>
+        <div class="poster-title">THE<br>PROC-<br>ESS</div>
+      </div>
+
+      <div class="novu-sig">
+        <svg width="10" height="10" viewBox="0 0 110 110" fill="none"><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        <span class="novu-sig-text">NOVU</span>
+      </div>
+    </div>
+    <div class="poster-label">04 · Process</div>
+  </div>
+
+  <!-- ⑤ REVIEWS -->
+  <div>
+    <div class="poster p-reviews">
+      <div class="top-block"></div>
+
+      <div class="story-bar">
+        <div class="story-progress"><div class="story-progress-fill"></div></div>
+        <div class="story-avatar" style="border-color:rgba(200,255,0,0.4)">
+          <svg width="14" height="14" viewBox="0 0 110 110" fill="none"><circle cx="55" cy="55" r="52" fill="#111"/><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        </div>
+        <span class="story-name">novustudios</span>
+      </div>
+
+      <div class="quote-block">
+        <div class="stars">★★★★★</div>
+        <div class="quote-text">"Novu Studios transformed our restaurant's online presence completely. Bookings went up within the first week."</div>
+        <div class="quote-author">— MARIA T. · BELLA ROMA</div>
+      </div>
+
+      <div class="second-review">
+        <div class="review-2-stars">★★★★★</div>
+        <div class="review-2-text">"Our digital menu looks incredible. Customers always comment on it. Worth every penny."</div>
+        <div class="review-2-author">— KARIM H. · LE JARDIN</div>
+      </div>
+
+      <div class="content">
+        <span class="tag">// Client Love</span>
+        <div class="poster-title">RE-<br>VIEWS</div>
+      </div>
+    </div>
+    <div class="poster-label">05 · Reviews</div>
+  </div>
+
+  <!-- ⑥ PRICING -->
+  <div>
+    <div class="poster p-pricing">
+      <div class="big-num">$</div>
+
+      <div class="story-bar">
+        <div class="story-progress" style="background:rgba(8,8,8,0.2)"><div class="story-progress-fill" style="background:#080808"></div></div>
+        <div class="story-avatar" style="background:#080808; border-color:rgba(8,8,8,0.3)">
+          <svg width="14" height="14" viewBox="0 0 110 110" fill="none"><rect x="27" y="26" width="14" height="58" rx="2" fill="#c8ff00"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#c8ff00"/><line x1="41" y1="26" x2="69" y2="84" stroke="#080808" stroke-width="12" stroke-linecap="round"/></svg>
+        </div>
+        <span class="story-name" style="color:#080808; opacity:0.6">novustudios</span>
+      </div>
+
+      <div class="content" style="bottom:40px">
+        <span class="tag">// Packages</span>
+        <div class="poster-title">PRIC-<br>ING</div>
+        <div class="pkg-row">
+          <div class="pkg-item"><span class="pkg-name">Starter — Landing Page</span><span class="pkg-price">$299</span></div>
+          <div class="pkg-item"><span class="pkg-name">Standard — Full Site</span><span class="pkg-price">$599</span></div>
+          <div class="pkg-item" style="background:rgba(8,8,8,0.15)"><span class="pkg-name">Pro — Site + Menu</span><span class="pkg-price">$899</span></div>
+        </div>
+        <div class="poster-body" style="margin-top:10px; font-size:9px;">Custom quotes available. DM for details.</div>
+      </div>
+
+      <div class="cta-bar">DM to get a free quote → @novustudios</div>
+    </div>
+    <div class="poster-label">06 · Pricing</div>
+  </div>
+
+</div>
+
+<!-- ROW 3 -->
+<div class="poster-row">
+
+  <!-- ⑦ BEHIND THE SCENES -->
+  <div>
+    <div class="poster p-bts">
+      <div class="editor-mock">
+        <div class="editor-topbar">
+          <div class="ed-dot" style="background:#ff5f56"></div>
+          <div class="ed-dot" style="background:#ffbd2e"></div>
+          <div class="ed-dot" style="background:#27c93f"></div>
+          <span style="font-family:'Space Mono',monospace;font-size:7px;color:#444;margin-left:6px;">index.html</span>
+        </div>
+        <div class="editor-body">
+          <div class="code-line"><span class="ln">1</span><span class="kw">&lt;!</span><span class="nt">DOCTYPE</span><span class="st"> html</span><span class="kw">&gt;</span></div>
+          <div class="code-line"><span class="ln">2</span><span class="kw">&lt;</span><span class="nt">html</span><span class="at"> lang</span><span class="kw">="</span><span class="st">en</span><span class="kw">"&gt;</span></div>
+          <div class="code-line"><span class="ln">3</span><span class="cm">/* Bella Roma Restaurant */</span></div>
+          <div class="code-line"><span class="ln">4</span><span class="kw">&lt;</span><span class="fn">header</span><span class="kw">&gt;</span></div>
+          <div class="code-line"><span class="ln">5</span>&nbsp;&nbsp;<span class="kw">&lt;</span><span class="nt">nav</span><span class="at"> class</span><span class="kw">="</span><span class="st">main-nav</span><span class="kw">"&gt;</span></div>
+          <div class="code-line"><span class="ln">6</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">// custom theme ✦</span></div>
+          <div class="code-line"><span class="ln">7</span>&nbsp;&nbsp;<span class="kw">&lt;/</span><span class="fn">nav</span><span class="kw">&gt;</span></div>
+          <div class="code-line"><span class="ln">8</span><span class="kw">&lt;/</span><span class="fn">header</span><span class="kw">&gt;</span></div>
+          <div class="code-line"><span class="ln">9</span><span class="kw">&lt;</span><span class="nt">section</span><span class="at"> id</span><span class="kw">="</span><span class="st">hero</span><span class="kw">"&gt;</span></div>
+          <div class="code-line"><span class="ln">10</span>&nbsp;&nbsp;<span class="cm">// hero animation</span></div>
+          <div class="code-line"><span class="ln">11</span><span class="st">▌</span></div>
+        </div>
+      </div>
+
+      <div class="story-bar">
+        <div class="story-progress"><div class="story-progress-fill"></div></div>
+        <div class="story-avatar"><svg width="14" height="14" viewBox="0 0 110 110" fill="none"><circle cx="55" cy="55" r="52" fill="#111"/><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg></div>
+        <span class="story-name">novustudios</span>
+      </div>
+
+      <div class="content">
+        <span class="tag">// Behind The Scenes</span>
+        <div class="poster-title">HOW<br>IT'S<br>MADE</div>
+        <div class="poster-body">Every line written by hand — no page builders, no templates. Just clean, fast code.</div>
+      </div>
+
+      <div class="novu-sig">
+        <svg width="10" height="10" viewBox="0 0 110 110" fill="none"><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        <span class="novu-sig-text">NOVU</span>
+      </div>
+    </div>
+    <div class="poster-label">07 · Behind The Scenes</div>
+  </div>
+
+  <!-- ⑧ CONTACT -->
+  <div>
+    <div class="poster p-contact">
+      <div class="diagonal-bg"></div>
+      <div class="glow"></div>
+
+      <div class="story-bar">
+        <div class="story-progress"><div class="story-progress-fill"></div></div>
+        <div class="story-avatar"><svg width="14" height="14" viewBox="0 0 110 110" fill="none"><circle cx="55" cy="55" r="52" fill="#111"/><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg></div>
+        <span class="story-name">novustudios</span>
+      </div>
+
+      <div class="contact-cards">
+        <div class="contact-card highlight-card">
+          <div class="cc-icon lime">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#080808" stroke-width="2.5" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </div>
+          <div class="cc-info"><span class="cc-label">Instagram DM</span><span class="cc-value">@studiosnovu</span></div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon dark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          </div>
+          <div class="cc-info"><span class="cc-label">Email</span><span class="cc-value">novustudios@gmail.com</span></div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon dark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <div class="cc-info"><span class="cc-label">Website</span><span class="cc-value">novustudios.com</span></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <span class="tag">// Get In Touch</span>
+        <div class="poster-title">LET'S<br>TALK</div>
+        <div class="poster-body">Ready to build something? Reach out and let's get started on your project today.</div>
+        <div class="lime-pill">DM Us Now →</div>
+      </div>
+
+      <div class="novu-sig">
+        <svg width="10" height="10" viewBox="0 0 110 110" fill="none"><rect x="27" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><rect x="69" y="26" width="14" height="58" rx="2" fill="#f0ede6"/><line x1="41" y1="26" x2="69" y2="84" stroke="#c8ff00" stroke-width="12" stroke-linecap="round"/></svg>
+        <span class="novu-sig-text">NOVU</span>
+      </div>
+    </div>
+    <div class="poster-label">08 · Contact</div>
+  </div>
+
+</div>
+
+</body>
+</html>
