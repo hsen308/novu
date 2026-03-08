@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Novu Studios — Custom websites and digital identities built from scratch. Professional web design for restaurants, cafés, and businesses worldwide.">
+<title>Novu Studios — Web Design &amp; Digital Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@200;300;400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress"></div>
+
+<!-- STAR FIELD (fixed background) -->
+<canvas id="star-canvas"></canvas>
+
+<!-- FLOATING MOBILE CTA -->
+<div id="floating-cta">
+  <a href="https://wa.me/96170786131?text=Hi%20Novu%20Studios%2C%20I'd%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Get a Quote
+  </a>
+</div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pre-letters">
+    <span class="pre-letter">N</span>
+    <span class="pre-letter">O</span>
+    <span class="pre-letter">V</span>
+    <span class="pre-letter lime">U</span>
+  </div>
+  <div class="pre-meta">Web Design Studio &middot; Est. 2026</div>
+  <div class="pre-count-row">
+    <div class="pre-count"><span id="pre-num">0</span><em>%</em></div>
+  </div>
+  <div class="pre-bar-wrap"><div class="pre-bar" id="pre-bar"></div></div>
+</div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<div class="cur-trail"></div>
+<div class="cur-trail"></div>
+<div class="cur-trail"></div>
+<div class="cur-trail"></div>
+<div class="cur-trail"></div>
+<div id="cur-label" class="cur-label"></div>
+
+<!-- NAV OVERLAY -->
+<div id="nav-overlay">
+  <ul class="ol-nav">
+    <li><a href="#services" data-close><span class="ol-num">01</span>Services<span class="ol-arrow">&#8599;</span></a></li>
+    <li><a href="#work" data-close><span class="ol-num">02</span>Work<span class="ol-arrow">&#8599;</span></a></li>
+    <li><a href="#process" data-close><span class="ol-num">03</span>Process<span class="ol-arrow">&#8599;</span></a></li>
+    <li><a href="#pricing" data-close><span class="ol-num">04</span>Pricing<span class="ol-arrow">&#8599;</span></a></li>
+    <li><a href="#about" data-close><span class="ol-num">05</span>About<span class="ol-arrow">&#8599;</span></a></li>
+    <li><a href="#contact" data-close><span class="ol-num">06</span>Contact<span class="ol-arrow">&#8599;</span></a></li>
+  </ul>
+  <div class="ol-footer">
+    <div class="ol-social">
+      <a href="https://instagram.com/studiosnovu" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/96170786131" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:novustudios@gmail.com">Email</a>
+    </div>
+    <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--muted);letter-spacing:0.2em;">&copy; 2026 NOVU STUDIOS &middot; LEBANON</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+      <rect x="1" y="1" width="46" height="46" rx="10" stroke="var(--border-mid)" stroke-width="1.5"/>
+      <rect x="12" y="13" width="5.5" height="22" rx="1" fill="var(--off)"/>
+      <rect x="30.5" y="13" width="5.5" height="22" rx="1" fill="var(--off)"/>
+      <path d="M17.5 13 L30.5 35" stroke="#c8ff00" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <span class="nav-logo-name">NOVU</span>
+  </a>
+  <div class="nav-right">
+    <a href="#services"     class="nav-link">Services</a>
+    <a href="#work"         class="nav-link">Work</a>
+    <a href="#process"      class="nav-link">Process</a>
+    <a href="#pricing"      class="nav-link">Pricing</a>
+    <a href="#contact"      class="nav-link">Contact</a>
+    <a href="https://wa.me/96170786131" target="_blank" rel="noopener" class="nav-avail">
+      <span class="avail-dot"></span>Available
+    </a>
+    <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-noise"></div>
+
+  <div class="hero-badge">
+    <svg viewBox="0 0 200 200">
+      <defs>
+        <path id="badge-path" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
+      </defs>
+      <text><textPath href="#badge-path" startOffset="0%">WEB DESIGN &middot; EST. 2026 &middot; LEBANON &middot; NOVU STUDIOS &middot; </textPath></text>
+    </svg>
+    <div class="hero-badge-inner"><span class="hero-badge-n">N</span></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span>Web Design Studio &middot; Est. 2026</span>
+    </div>
+    <h1 class="hero-headline">
+      <span class="line"><span class="word">WE BUILD</span></span>
+      <span class="line"><span class="word lime"><span id="typewriter" class="typewriter-word">WEBSITES</span></span></span>
+      <span class="line"><span class="word">THAT <span class="outline">WORK</span></span></span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-desc">Custom websites and digital identities for restaurants, caf&eacute;s, and businesses that want to stand out &mdash; handcrafted code, zero templates, built to convert.</p>
+      <div class="hero-actions">
+        <a href="#work"    class="btn-lime">View Our Work</a>
+        <a href="#contact" class="btn-outline">Start a Project</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="h-stat">
+      <div class="h-stat-num"><span class="count-up" data-target="15">0</span><span class="accent">+</span></div>
+      <div class="h-stat-label">Projects Done</div>
+    </div>
+    <div class="h-stat">
+      <div class="h-stat-num"><span class="count-up" data-target="48">0</span><span class="accent">h</span></div>
+      <div class="h-stat-label">Avg Turnaround</div>
+    </div>
+    <div class="h-stat">
+      <div class="h-stat-num"><span class="count-up" data-target="100">0</span><span class="accent">%</span></div>
+      <div class="h-stat-label">Custom Code</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-wheel"><div class="scroll-dot"></div></div>
+    <div class="scroll-label">Scroll</div>
+  </div>
+</section>
+
+<!-- DUAL MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-row">
+    <div class="marquee-track">
+      <div class="m-item">Restaurant Websites<span class="m-dot"></span></div>
+      <div class="m-item">Digital Menus<span class="m-dot"></span></div>
+      <div class="m-item">Business Sites<span class="m-dot"></span></div>
+      <div class="m-item">Landing Pages<span class="m-dot"></span></div>
+      <div class="m-item">Brand Identity<span class="m-dot"></span></div>
+      <div class="m-item">Portfolio Sites<span class="m-dot"></span></div>
+      <div class="m-item">Mobile First<span class="m-dot"></span></div>
+      <div class="m-item hi">Pure Custom Code<span class="m-dot"></span></div>
+      <div class="m-item">Restaurant Websites<span class="m-dot"></span></div>
+      <div class="m-item">Digital Menus<span class="m-dot"></span></div>
+      <div class="m-item">Business Sites<span class="m-dot"></span></div>
+      <div class="m-item">Landing Pages<span class="m-dot"></span></div>
+      <div class="m-item">Brand Identity<span class="m-dot"></span></div>
+      <div class="m-item">Portfolio Sites<span class="m-dot"></span></div>
+      <div class="m-item">Mobile First<span class="m-dot"></span></div>
+      <div class="m-item hi">Pure Custom Code<span class="m-dot"></span></div>
+    </div>
+  </div>
+  <div class="marquee-row">
+    <div class="marquee-track rtl">
+      <div class="m-item hi">BLCK Coffee &middot; Beirut<span class="m-dot"></span></div>
+      <div class="m-item">Ikigai &middot; Fine Dining<span class="m-dot"></span></div>
+      <div class="m-item">Hamburghini &middot; Kfarsir<span class="m-dot"></span></div>
+      <div class="m-item hi">Krema Caf&eacute;<span class="m-dot"></span></div>
+      <div class="m-item">Cafe Mate &middot; Batroun<span class="m-dot"></span></div>
+      <div class="m-item">Oak &middot; Caf&eacute; &amp; Bar<span class="m-dot"></span></div>
+      <div class="m-item hi">48h Delivery<span class="m-dot"></span></div>
+      <div class="m-item">No Templates &middot; Ever<span class="m-dot"></span></div>
+      <div class="m-item hi">BLCK Coffee &middot; Beirut<span class="m-dot"></span></div>
+      <div class="m-item">Ikigai &middot; Fine Dining<span class="m-dot"></span></div>
+      <div class="m-item">Hamburghini &middot; Kfarsir<span class="m-dot"></span></div>
+      <div class="m-item hi">Krema Caf&eacute;<span class="m-dot"></span></div>
+      <div class="m-item">Cafe Mate &middot; Batroun<span class="m-dot"></span></div>
+      <div class="m-item">Oak &middot; Caf&eacute; &amp; Bar<span class="m-dot"></span></div>
+      <div class="m-item hi">48h Delivery<span class="m-dot"></span></div>
+      <div class="m-item">No Templates &middot; Ever<span class="m-dot"></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS STRIP -->
+<section id="stats">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num"><span class="count-up" data-target="15">0</span><span class="s-accent">+</span></div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="count-up" data-target="48">0</span><span class="s-accent">h</span></div>
+      <div class="stat-label">Avg. Turnaround</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="count-up" data-target="100">0</span><span class="s-accent">%</span></div>
+      <div class="stat-label">Custom Code Only</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="s-flag">&#127758;</span></div>
+      <div class="stat-label">Based in Lebanon &middot; Worldwide</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="services-header">
+    <div>
+      <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// What We Do</span></div>
+      <div class="s-title">
+        <div class="clip-reveal"><span class="clip-inner">WHAT</span></div>
+        <div class="clip-reveal"><span class="clip-inner">WE DO</span></div>
+      </div>
+    </div>
+    <p class="services-desc">Every project is built from scratch around your business &mdash; unique design, handcrafted code, no page builders, no templates. Just clean work that performs.</p>
+  </div>
+
+  <div class="services-list">
+    <div class="service-item">
+      <div class="service-num">01</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="icon-path" d="M3 6h18M3 12h18M3 18h11"/>
+          <circle class="icon-path" cx="19" cy="18" r="3"/>
+        </svg>
+      </div>
+      <div>
+        <div class="service-name">Restaurant &amp; Caf&eacute; Websites</div>
+        <div class="service-body">Full custom websites for food &amp; beverage brands &mdash; digital menus, gallery, booking links, and a visual identity that matches your space perfectly.</div>
+      </div>
+      <div class="service-tags"><span class="s-tag">Design</span><span class="s-tag">Dev</span></div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-num">02</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="icon-path" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="service-name">Business Landing Pages</div>
+        <div class="service-body">High-converting single pages for any type of business &mdash; fast, mobile-perfect, with a clear path to action that turns visitors into customers.</div>
+      </div>
+      <div class="service-tags"><span class="s-tag">Design</span><span class="s-tag">Dev</span></div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-num">03</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect class="icon-path" x="5" y="2" width="14" height="20" rx="2"/>
+          <path class="icon-path" d="M9 7h6M9 11h6M9 15h4"/>
+        </svg>
+      </div>
+      <div>
+        <div class="service-name">Digital Menus</div>
+        <div class="service-body">Turn your static menu into a beautiful mobile-friendly web experience &mdash; always up to date, no printing costs, shareable via QR code instantly.</div>
+      </div>
+      <div class="service-tags"><span class="s-tag">Design</span><span class="s-tag">Dev</span></div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-num">04</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="icon-path" d="M2 12L12 2l10 10-10 10L2 12z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="service-name">Portfolio &amp; Personal Sites</div>
+        <div class="service-body">Showcase your work with a sleek animated portfolio &mdash; scroll-driven interactions built to make a lasting impression on potential clients.</div>
+      </div>
+      <div class="service-tags"><span class="s-tag">Design</span><span class="s-tag">Dev</span></div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-num">05</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="icon-path" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="service-name">Brand Identity &amp; Logo</div>
+        <div class="service-body">Logo design, color systems, typography, and icon sets &mdash; a visual language your audience will remember and trust across every touchpoint.</div>
+      </div>
+      <div class="service-tags"><span class="s-tag">Branding</span></div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-num">06</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="icon-path" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="service-name">Maintenance &amp; Updates</div>
+        <div class="service-body">Ongoing content updates, menu changes, and technical support. Your site stays fresh, fast, and working perfectly &mdash; we handle everything.</div>
+      </div>
+      <div class="service-tags"><span class="s-tag">Support</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us" class="section">
+  <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// Why Novu</span></div>
+  <div class="s-title">
+    <div class="clip-reveal"><span class="clip-inner">WHY</span></div>
+    <div class="clip-reveal"><span class="clip-inner">CHOOSE US</span></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          <line x1="2" y1="2" x2="22" y2="22"/>
+        </svg>
+      </div>
+      <div class="why-title">No Templates. Ever.</div>
+      <div class="why-body">Every pixel designed from scratch for your brand. No Wix, no WordPress, no shortcuts. Pure handcrafted HTML, CSS, and JavaScript that belongs to you and only you &mdash; forever.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+        </svg>
+      </div>
+      <div class="why-title">48-Hour Delivery</div>
+      <div class="why-body">From the first message to a live website in under 48 hours on standard projects. We move fast without ever compromising on quality, detail, or performance. Speed is part of the service.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
+        </svg>
+      </div>
+      <div class="why-title">Mobile-First Always</div>
+      <div class="why-body">Over 70% of your customers browse on their phone. We design for mobile first, then desktop &mdash; so your site looks flawless on every screen size from the very first day it goes live.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="work-header">
+    <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// Featured Projects</span></div>
+    <div class="s-title">
+      <div class="clip-reveal"><span class="clip-inner">OUR WORK</span></div>
+    </div>
+  </div>
+
+  <div class="work-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+    <button class="filter-btn" data-filter="cafe">Caf&eacute;</button>
+    <button class="filter-btn" data-filter="menu">Digital Menu</button>
+  </div>
+
+  <div class="work-track" id="work-track">
+
+    <!-- BLCK -->
+    <div class="work-card" data-cat="restaurant" data-href="https://hsen308.github.io/blck/">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 580 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <rect width="580" height="540" fill="#0f172a"/>
+          <rect width="580" height="540" fill="url(#blck-g)" opacity="0.5"/>
+          <defs><radialGradient id="blck-g" cx="30%" cy="20%"><stop offset="0%" stop-color="#c8a96e" stop-opacity="0.12"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+          <rect x="0" y="0" width="580" height="52" fill="rgba(15,23,42,0.95)"/>
+          <text x="36" y="32" fill="#c8a96e" font-family="monospace" font-size="14" font-weight="bold" letter-spacing="3">BLCK</text>
+          <text x="440" y="32" fill="#64748b" font-family="monospace" font-size="9" letter-spacing="2">MENU</text>
+          <text x="496" y="32" fill="#64748b" font-family="monospace" font-size="9" letter-spacing="2">FIND US</text>
+          <text x="36" y="140" fill="#f1f5f9" font-family="serif" font-size="52" font-weight="bold" letter-spacing="6">BLCK</text>
+          <text x="36" y="178" fill="#c8a96e" font-family="monospace" font-size="13" letter-spacing="4">SPECIALTY COFFEE</text>
+          <text x="36" y="210" fill="#64748b" font-family="monospace" font-size="10" font-style="italic">Respect the Beans.</text>
+          <rect x="36" y="228" width="110" height="32" fill="#c8a96e"/>
+          <text x="68" y="248" fill="#0f172a" font-family="monospace" font-size="9" font-weight="bold" letter-spacing="2">VIEW MENU</text>
+          <rect x="0" y="290" width="580" height="42" fill="rgba(15,23,42,0.9)"/>
+          <rect x="20" y="302" width="60" height="18" rx="9" fill="#c8a96e"/>
+          <text x="36" y="314" fill="#0f172a" font-family="monospace" font-size="8" letter-spacing="1">Coffee</text>
+          <text x="100" y="314" fill="#475569" font-family="monospace" font-size="8">Cold Drinks</text>
+          <text x="192" y="314" fill="#475569" font-family="monospace" font-size="8">Smoothies</text>
+          <text x="272" y="314" fill="#475569" font-family="monospace" font-size="8">Food</text>
+          <text x="320" y="314" fill="#475569" font-family="monospace" font-size="8">Bakery</text>
+          <rect x="36" y="355" width="500" height="1" fill="#1e293b"/>
+          <text x="36" y="376" fill="#f1f5f9" font-family="monospace" font-size="11">Espresso</text>
+          <rect x="36" y="390" width="500" height="1" fill="#1e293b"/>
+          <text x="36" y="411" fill="#f1f5f9" font-family="monospace" font-size="11">Cappuccino</text>
+          <rect x="36" y="425" width="500" height="1" fill="#1e293b"/>
+          <text x="36" y="446" fill="#f1f5f9" font-family="monospace" font-size="11">Latte</text>
+          <rect x="36" y="460" width="500" height="1" fill="#1e293b"/>
+          <text x="36" y="481" fill="#f1f5f9" font-family="monospace" font-size="11">V60 Pour Over</text>
+          <rect x="36" y="495" width="500" height="1" fill="#1e293b"/>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Specialty Coffee &middot; Beirut</div>
+        <div class="w-title">BLCK Specialty Coffee</div>
+        <div class="w-desc">Single-page menu site with sticky section navigation, loader animation, and mobile-first responsive layout.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+    <!-- Ikigai -->
+    <div class="work-card" data-cat="restaurant" data-href="https://hsen308.github.io/ikigai/">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <rect width="420" height="540" fill="#faf8f5"/>
+          <defs><radialGradient id="ik-g" cx="50%" cy="0%"><stop offset="0%" stop-color="#c9a961" stop-opacity="0.1"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+          <rect width="420" height="110" fill="#5c1a1a"/>
+          <text x="210" y="52" text-anchor="middle" fill="#c9a961" font-family="serif" font-size="32" font-style="italic" letter-spacing="3">Ikigai</text>
+          <text x="210" y="76" text-anchor="middle" fill="rgba(201,169,97,0.6)" font-family="monospace" font-size="8" letter-spacing="5">FINE DINING</text>
+          <line x1="170" y1="88" x2="250" y2="88" stroke="#c9a961" stroke-width="0.5" opacity="0.5"/>
+          <text x="210" y="155" text-anchor="middle" fill="#1a1410" font-family="serif" font-size="20" font-style="italic">Our Menu</text>
+          <line x1="160" y1="168" x2="260" y2="168" stroke="#c9a961" stroke-width="1"/>
+          <text x="36" y="210" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Halloumi Pesto Bagel</text>
+          <text x="36" y="228" fill="#8a7a6a" font-family="monospace" font-size="8">Halloumi, pesto, tomato &amp; greens</text>
+          <line x1="36" y1="240" x2="384" y2="240" stroke="#e8d7b5" stroke-width="0.5"/>
+          <text x="36" y="268" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Smoked Salmon Bagel</text>
+          <text x="36" y="286" fill="#8a7a6a" font-family="monospace" font-size="8">Smoked salmon, cream cheese, capers</text>
+          <line x1="36" y1="298" x2="384" y2="298" stroke="#e8d7b5" stroke-width="0.5"/>
+          <text x="36" y="326" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Smoked Chicken Caesar</text>
+          <text x="36" y="344" fill="#8a7a6a" font-family="monospace" font-size="8">Mixed greens, smoked chicken, parmesan</text>
+          <line x1="36" y1="356" x2="384" y2="356" stroke="#e8d7b5" stroke-width="0.5"/>
+          <rect x="36" y="400" width="40" height="1" fill="#c9a961"/>
+          <text x="36" y="425" fill="#5c1a1a" font-family="serif" font-size="11" font-style="italic">Find Us in Beirut</text>
+          <text x="36" y="444" fill="#8a7a6a" font-family="monospace" font-size="8" letter-spacing="1">Open Daily 8AM &mdash; 10PM</text>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Fine Dining &middot; Beirut</div>
+        <div class="w-title">Ikigai</div>
+        <div class="w-desc">Premium restaurant menu with elegant cream &amp; burgundy palette, serif typography, and smooth scroll reveal animations.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+    <!-- Hamburghini -->
+    <div class="work-card" data-cat="restaurant" data-href="https://hsen308.github.io/hamburghini/">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <rect width="420" height="540" fill="#f5f5f5"/>
+          <rect width="420" height="56" fill="white"/>
+          <rect x="0" y="55" width="420" height="1" fill="#eee"/>
+          <text x="28" y="35" fill="#1a1a1a" font-family="serif" font-size="22" font-weight="bold" letter-spacing="1">Hamburghini</text>
+          <rect width="420" height="220" fill="#1a1a1a" y="56"/>
+          <defs><radialGradient id="hb-g" cx="70%" cy="50%"><stop offset="0%" stop-color="#FF6B35" stop-opacity="0.3"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+          <rect width="420" height="220" fill="url(#hb-g)" y="56"/>
+          <text x="28" y="128" fill="white" font-family="serif" font-size="36" font-weight="bold">BEST</text>
+          <text x="28" y="168" fill="#FF6B35" font-family="serif" font-size="36" font-weight="bold">BURGERS</text>
+          <text x="28" y="198" fill="#888" font-family="monospace" font-size="9" letter-spacing="2">KFARSIR, LEBANON</text>
+          <rect x="28" y="212" width="110" height="36" fill="#FF6B35"/>
+          <text x="60" y="234" fill="white" font-family="monospace" font-size="9" font-weight="bold" letter-spacing="2">ORDER NOW</text>
+          <rect x="20" y="294" width="115" height="110" rx="6" fill="white"/>
+          <rect x="20" y="294" width="115" height="60" rx="6" fill="#FF6B35" opacity="0.15"/>
+          <text x="77" y="330" text-anchor="middle" fill="#FF6B35" font-family="serif" font-size="22">&#127828;</text>
+          <text x="77" y="368" text-anchor="middle" fill="#1a1a1a" font-family="monospace" font-size="8" font-weight="bold">Classic</text>
+          <text x="77" y="382" text-anchor="middle" fill="#888" font-family="monospace" font-size="7">$8.99</text>
+          <rect x="150" y="294" width="115" height="110" rx="6" fill="white"/>
+          <rect x="150" y="294" width="115" height="60" rx="6" fill="#FF6B35" opacity="0.15"/>
+          <text x="207" y="330" text-anchor="middle" fill="#FF6B35" font-family="serif" font-size="22">&#127839;</text>
+          <text x="207" y="368" text-anchor="middle" fill="#1a1a1a" font-family="monospace" font-size="8" font-weight="bold">Fries</text>
+          <text x="207" y="382" text-anchor="middle" fill="#888" font-family="monospace" font-size="7">$3.99</text>
+          <rect x="280" y="294" width="115" height="110" rx="6" fill="white"/>
+          <rect x="280" y="294" width="115" height="60" rx="6" fill="#FF6B35" opacity="0.15"/>
+          <text x="337" y="330" text-anchor="middle" fill="#FF6B35" font-family="serif" font-size="22">&#127822;</text>
+          <text x="337" y="368" text-anchor="middle" fill="#1a1a1a" font-family="monospace" font-size="8" font-weight="bold">Shake</text>
+          <text x="337" y="382" text-anchor="middle" fill="#888" font-family="monospace" font-size="7">$4.99</text>
+          <rect x="0" y="440" width="420" height="100" fill="#1a1a1a"/>
+          <text x="28" y="480" fill="white" font-family="serif" font-size="16" font-weight="bold">Hamburghini</text>
+          <text x="28" y="500" fill="#555" font-family="monospace" font-size="8" letter-spacing="1">Kfarsir, Lebanon</text>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Burger Restaurant &middot; Kfarsir</div>
+        <div class="w-title">Hamburghini</div>
+        <div class="w-desc">Multi-design showcase with a built-in version selector &mdash; 4 distinct layouts for the client to choose from, all in one file.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+    <!-- Krema -->
+    <div class="work-card" data-cat="cafe" data-href="https://hsen308.github.io/krema/">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <rect width="420" height="540" fill="#FFF8F0"/>
+          <rect width="420" height="70" fill="white"/>
+          <text x="210" y="28" text-anchor="middle" fill="#2C1810" font-family="serif" font-size="22" font-weight="bold" letter-spacing="2">Krema</text>
+          <text x="210" y="50" text-anchor="middle" fill="#8B6F47" font-family="monospace" font-size="8" letter-spacing="4">PREMIUM CAFE</text>
+          <line x1="36" y1="80" x2="384" y2="80" stroke="#f0e6d8" stroke-width="1"/>
+          <text x="36" y="128" fill="#2C1810" font-family="serif" font-size="28" font-style="italic">Artisan Coffee</text>
+          <text x="36" y="156" fill="#2C1810" font-family="serif" font-size="28" font-style="italic">&amp; Fresh Bagels</text>
+          <text x="36" y="184" fill="#8B6F47" font-family="monospace" font-size="9">A cozy corner for coffee lovers</text>
+          <rect x="36" y="202" width="100" height="30" rx="3" fill="#8B6F47"/>
+          <text x="64" y="221" fill="white" font-family="monospace" font-size="8" letter-spacing="1">Our Menu</text>
+          <rect x="0" y="256" width="420" height="1" fill="#f0e6d8"/>
+          <text x="36" y="288" fill="#2C1810" font-family="serif" font-size="14" font-style="italic">Espresso Drinks</text>
+          <text x="36" y="316" fill="#2C1810" font-family="monospace" font-size="10">Flat White</text>
+          <text x="370" y="316" text-anchor="end" fill="#8B6F47" font-family="monospace" font-size="10">$5</text>
+          <line x1="36" y1="326" x2="384" y2="326" stroke="#f0e6d8" stroke-width="0.5"/>
+          <text x="36" y="346" fill="#2C1810" font-family="monospace" font-size="10">Caramel Latte</text>
+          <text x="370" y="346" text-anchor="end" fill="#8B6F47" font-family="monospace" font-size="10">$6</text>
+          <line x1="36" y1="356" x2="384" y2="356" stroke="#f0e6d8" stroke-width="0.5"/>
+          <text x="36" y="376" fill="#2C1810" font-family="monospace" font-size="10">V60 Pour Over</text>
+          <text x="370" y="376" text-anchor="end" fill="#8B6F47" font-family="monospace" font-size="10">$7</text>
+          <line x1="36" y1="386" x2="384" y2="386" stroke="#f0e6d8" stroke-width="0.5"/>
+          <circle cx="210" cy="470" r="36" fill="#FFF0E0" stroke="#f0e6d8" stroke-width="1"/>
+          <text x="210" y="476" text-anchor="middle" fill="#8B6F47" font-family="serif" font-size="24">K</text>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Premium Caf&eacute;</div>
+        <div class="w-title">Krema Caf&eacute;</div>
+        <div class="w-desc">Warm, artisan caf&eacute; website with Playfair Display typography, cream palette, and rich hover interactions throughout.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+    <!-- Cafe Mate -->
+    <div class="work-card" data-cat="cafe" data-href="https://hsen308.github.io/matecafe/">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <rect width="420" height="540" fill="#080d0a"/>
+          <defs><radialGradient id="cm-g" cx="50%" cy="100%"><stop offset="0%" stop-color="#2d7a4a" stop-opacity="0.25"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+          <rect width="420" height="540" fill="url(#cm-g)" opacity="0.7"/>
+          <text x="210" y="80" text-anchor="middle" fill="#e8f0e3" font-family="serif" font-size="28" font-style="italic" letter-spacing="2">Cafe Mate</text>
+          <text x="210" y="104" text-anchor="middle" fill="#2d7a4a" font-family="monospace" font-size="8" letter-spacing="5">BATROUN &middot; LEBANON</text>
+          <line x1="36" y1="150" x2="384" y2="150" stroke="#1e3025" stroke-width="1"/>
+          <text x="36" y="190" fill="#e8f0e3" font-family="serif" font-size="15" font-style="italic">Coffee</text>
+          <line x1="36" y1="205" x2="384" y2="205" stroke="#1e3025" stroke-width="0.5"/>
+          <text x="36" y="228" fill="#88a890" font-family="monospace" font-size="9">Espresso</text>
+          <line x1="36" y1="240" x2="384" y2="240" stroke="#1e3025" stroke-width="0.5"/>
+          <text x="36" y="263" fill="#88a890" font-family="monospace" font-size="9">V60 Pour Over</text>
+          <line x1="36" y1="275" x2="384" y2="275" stroke="#1e3025" stroke-width="0.5"/>
+          <text x="36" y="298" fill="#88a890" font-family="monospace" font-size="9">Cold Brew</text>
+          <line x1="36" y1="310" x2="384" y2="310" stroke="#1e3025" stroke-width="0.5"/>
+          <text x="36" y="360" fill="#e8f0e3" font-family="serif" font-size="15" font-style="italic">Pastries</text>
+          <line x1="36" y1="375" x2="384" y2="375" stroke="#1e3025" stroke-width="0.5"/>
+          <text x="36" y="398" fill="#88a890" font-family="monospace" font-size="9">Croissant</text>
+          <line x1="36" y1="410" x2="384" y2="410" stroke="#1e3025" stroke-width="0.5"/>
+          <text x="36" y="433" fill="#88a890" font-family="monospace" font-size="9">Almond Cookie</text>
+          <circle cx="210" cy="490" r="4" fill="#2d7a4a"/>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Coffee Shop &middot; Batroun</div>
+        <div class="w-title">Cafe Mate</div>
+        <div class="w-desc">Editorial dark-green caf&eacute; site with Cormorant Garamond and Cinzel typography &mdash; minimal, elegant, deeply atmospheric.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+    <!-- Oak -->
+    <div class="work-card" data-cat="cafe" data-href="https://oakcafe.vercel.app">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <rect width="420" height="540" fill="#F5EDE5"/>
+          <rect width="420" height="60" fill="#F5EDE5"/>
+          <text x="210" y="36" text-anchor="middle" fill="#2a2a2a" font-family="serif" font-size="20" font-weight="300" letter-spacing="8">oak</text>
+          <defs><linearGradient id="oak-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8B4655" stop-opacity="0.9"/><stop offset="100%" stop-color="#6d3542" stop-opacity="0.85"/></linearGradient></defs>
+          <rect y="60" width="420" height="200" fill="url(#oak-g)"/>
+          <text x="36" y="135" fill="#E5D5C8" font-family="serif" font-size="44" font-weight="200" letter-spacing="2">Grow</text>
+          <text x="36" y="185" fill="#E5D5C8" font-family="serif" font-size="44" font-weight="200" letter-spacing="2">Wild.</text>
+          <text x="36" y="228" fill="rgba(229,213,200,0.6)" font-family="monospace" font-size="9" letter-spacing="3">SIP SLOW</text>
+          <text x="36" y="300" fill="#2a2a2a" font-family="serif" font-size="18" font-weight="300">Menu</text>
+          <line x1="36" y1="316" x2="384" y2="316" stroke="#D4C4B6" stroke-width="1"/>
+          <text x="36" y="344" fill="#2a2a2a" font-family="serif" font-size="12">Natural Wine Selection</text>
+          <line x1="36" y1="360" x2="384" y2="360" stroke="#D4C4B6" stroke-width="0.5"/>
+          <text x="36" y="388" fill="#2a2a2a" font-family="serif" font-size="12">Craft Beer</text>
+          <line x1="36" y1="404" x2="384" y2="404" stroke="#D4C4B6" stroke-width="0.5"/>
+          <text x="36" y="432" fill="#2a2a2a" font-family="serif" font-size="12">Specialty Coffee</text>
+          <line x1="36" y1="448" x2="384" y2="448" stroke="#D4C4B6" stroke-width="0.5"/>
+          <rect x="36" y="476" width="130" height="28" rx="14" fill="transparent" stroke="#8B4655" stroke-width="1"/>
+          <text x="101" y="494" text-anchor="middle" fill="#8B4655" font-family="monospace" font-size="8" letter-spacing="2">FIND US</text>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Caf&eacute; &amp; Bar</div>
+        <div class="w-title">Oak</div>
+        <div class="w-desc">Minimalist caf&eacute;/bar site with warm cream &amp; burgundy palette, light loading animation, and soft organic typography.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="drag-hint"><div class="drag-line"></div><span>Drag to explore</span></div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section">
+  <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// How We Work</span></div>
+  <div class="s-title">
+    <div class="clip-reveal"><span class="clip-inner">THE</span></div>
+    <div class="clip-reveal"><span class="clip-inner">PROCESS</span></div>
+  </div>
+  <div class="process-layout">
+    <div class="process-left">
+      <div class="process-left-big">HOW<br>WE<br>WORK</div>
+      <p class="process-left-desc">A clear, repeatable process that gets you from idea to live website faster than anyone else &mdash; without cutting corners on quality or detail.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="timeline-track"><div class="timeline-progress"></div></div>
+      <div class="p-step">
+        <div class="p-step-dot"></div>
+        <div class="p-num">01</div>
+        <div class="p-title">Discover</div>
+        <div class="p-body">We start with a conversation &mdash; your business, your goals, your audience. We learn what makes you different before touching a single pixel or writing a single line of code.</div>
+        <div class="p-tag">Strategy</div>
+        <div class="p-step-time">Day 1 &middot; Free consultation</div>
+      </div>
+      <div class="p-step">
+        <div class="p-step-dot"></div>
+        <div class="p-num">02</div>
+        <div class="p-title">Design</div>
+        <div class="p-body">We craft a visual language tailored to your brand &mdash; typography, color palette, layout, spacing, and micro-interactions that feel uniquely yours from first glance.</div>
+        <div class="p-tag">Aesthetics</div>
+        <div class="p-step-time">Day 1&ndash;2 &middot; Design phase</div>
+      </div>
+      <div class="p-step">
+        <div class="p-step-dot"></div>
+        <div class="p-num">03</div>
+        <div class="p-title">Build</div>
+        <div class="p-body">Pure handcrafted code. No page builders, no WordPress, no templates. Clean HTML, CSS, and JavaScript that loads fast and looks flawless on every screen and device.</div>
+        <div class="p-tag">Development</div>
+        <div class="p-step-time">Day 2&ndash;3 &middot; Development</div>
+      </div>
+      <div class="p-step">
+        <div class="p-step-dot"></div>
+        <div class="p-num">04</div>
+        <div class="p-title">Launch</div>
+        <div class="p-body">We handle deployment, final cross-device testing, and make sure everything is perfect before going live. Then we stay close for any updates or support you need.</div>
+        <div class="p-tag">Delivery</div>
+        <div class="p-step-time">Day 3 &middot; Live &amp; ready</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+  <div class="t-bg">REVIEWS</div>
+  <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// Client Reviews</span></div>
+  <div class="s-title">
+    <div class="clip-reveal"><span class="clip-inner">WHAT THEY</span></div>
+    <div class="clip-reveal"><span class="clip-inner">SAY</span></div>
+  </div>
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <div class="t-slide">
+        <div class="t-slide-inner">
+          <div class="t-card">
+            <div class="t-bar"></div>
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-text">&ldquo;The website Novu Studios built for us completely transformed how customers find us. Clean, fast, and exactly our vibe. We get compliments on it every single week.&rdquo;</p>
+            <div class="t-author">
+              <div class="t-av">R</div>
+              <div><div class="t-name">Rami K.</div><div class="t-role">Owner &middot; BLCK Specialty Coffee, Beirut</div></div>
+            </div>
+          </div>
+          <div class="t-card">
+            <div class="t-bar"></div>
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-text">&ldquo;Incredibly professional and fast. They understood what we wanted immediately &mdash; the design is stunning and it works perfectly on every phone. Highly recommend.&rdquo;</p>
+            <div class="t-author">
+              <div class="t-av">L</div>
+              <div><div class="t-name">Lara M.</div><div class="t-role">Manager &middot; Cafe Mate, Batroun</div></div>
+            </div>
+          </div>
+          <div class="t-card">
+            <div class="t-bar"></div>
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-text">&ldquo;We needed something premium that matched our restaurant&rsquo;s feel. The result was beyond what we imagined &mdash; elegant, smooth, and our customers love browsing it.&rdquo;</p>
+            <div class="t-author">
+              <div class="t-av">K</div>
+              <div><div class="t-name">Karim T.</div><div class="t-role">Co-Founder &middot; Ikigai, Beirut</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="t-slide">
+        <div class="t-slide-inner">
+          <div class="t-card">
+            <div class="t-bar"></div>
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-text">&ldquo;From the first call to the finished website in less than 48 hours. The attention to detail is unreal &mdash; every animation, every hover effect feels intentional and polished.&rdquo;</p>
+            <div class="t-author">
+              <div class="t-av">S</div>
+              <div><div class="t-name">Sara B.</div><div class="t-role">Owner &middot; Krema Caf&eacute;</div></div>
+            </div>
+          </div>
+          <div class="t-card">
+            <div class="t-bar"></div>
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-text">&ldquo;Our digital menu gets more engagement now than our old printed ones ever did. Customers share the link, scan the QR code, and always comment on how beautiful it looks.&rdquo;</p>
+            <div class="t-author">
+              <div class="t-av">M</div>
+              <div><div class="t-name">Maya R.</div><div class="t-role">Owner &middot; Oak Caf&eacute; &amp; Bar</div></div>
+            </div>
+          </div>
+          <div class="t-card">
+            <div class="t-bar"></div>
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="t-text">&ldquo;Worth every penny and then some. Novu Studios don&rsquo;t just build websites &mdash; they build experiences. Our new site has directly brought in new customers.&rdquo;</p>
+            <div class="t-author">
+              <div class="t-av">A</div>
+              <div><div class="t-name">Ahmad H.</div><div class="t-role">Manager &middot; Hamburghini, Kfarsir</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider-controls">
+    <div class="slider-dot active"></div>
+    <div class="slider-dot"></div>
+    <div class="slider-arrows">
+      <button class="slider-arrow" id="slider-prev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--off)" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="slider-arrow" id="slider-next" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--off)" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section">
+  <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// Investment</span></div>
+  <div class="s-title">
+    <div class="clip-reveal"><span class="clip-inner">PRICING</span></div>
+  </div>
+  <div class="pricing-grid">
+
+    <!-- Tier 1: Digital Menu -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Digital Menu</div>
+      <div class="pricing-price-label">QR Menu</div>
+      <div class="pricing-tagline">Scan &amp; browse — no app needed</div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-features">
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Mobile-first digital menu</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Custom QR code included</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Instant shareable link</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Categorised menu sections</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Branded design &amp; colors</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>WhatsApp &amp; social links</div>
+      </div>
+      <div class="pricing-cta">
+        <a href="https://wa.me/96170786131?text=Hi%20Novu%20Studios%2C%20I%27m%20interested%20in%20a%20Digital%20Menu." target="_blank" rel="noopener" class="btn-outline" style="display:flex;align-items:center;justify-content:center;width:100%;">Get a Quote &#8599;</a>
+      </div>
+    </div>
+
+    <!-- Tier 2: Full Website -->
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-tier">Full Website</div>
+      <div class="pricing-price-label">Business Site</div>
+      <div class="pricing-tagline">Your brand, online — done right</div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-features">
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Multi-section custom website</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Digital menu included</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Smooth animations &amp; interactions</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Mobile-first responsive layout</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Brand color &amp; typography system</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>SEO-ready structure &amp; meta tags</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>1 month free support</div>
+      </div>
+      <div class="pricing-cta">
+        <a href="https://wa.me/96170786131?text=Hi%20Novu%20Studios%2C%20I%27m%20interested%20in%20a%20Full%20Website." target="_blank" rel="noopener" class="btn-lime" style="display:flex;align-items:center;justify-content:center;width:100%;">Get a Quote &#8599;</a>
+      </div>
+    </div>
+
+    <!-- Tier 3: Premium Website -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Premium</div>
+      <div class="pricing-price-label">Elite Build</div>
+      <div class="pricing-tagline">World-class &mdash; no compromises</div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-features">
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Everything in Full Website</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Full brand identity &amp; logo design</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Advanced scroll &amp; hover effects</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Bilingual support (AR/EN)</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Ongoing maintenance plan</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Advanced SEO &amp; Google visibility</div>
+        <div class="pricing-feat"><div class="feat-check"><svg viewBox="0 0 14 14"><polyline class="check-path" points="2,7 5.5,11 12,3"/></svg></div>Priority support 24/7</div>
+      </div>
+      <div class="pricing-cta">
+        <a href="https://wa.me/96170786131?text=Hi%20Novu%20Studios%2C%20I%27m%20interested%20in%20a%20Premium%20Website." target="_blank" rel="noopener" class="btn-outline" style="display:flex;align-items:center;justify-content:center;width:100%;">Let&rsquo;s Talk &#8599;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// Common Questions</span></div>
+  <div class="s-title">
+    <div class="clip-reveal"><span class="clip-inner">FAQ</span></div>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-question">How fast can you build my website?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
+      <div class="faq-body"><div class="faq-body-inner">Standard websites are delivered in 48&ndash;72 hours from when you send us your content. More complex multi-page projects take 3&ndash;5 days. We&rsquo;ve never missed a deadline.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you use WordPress or Wix?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
+      <div class="faq-body"><div class="faq-body-inner">Never. Every website is built with pure HTML, CSS, and JavaScript &mdash; no page builders, no CMS, no templates. This gives us complete control over design, performance, and animations.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Will my site look good on mobile?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
+      <div class="faq-body"><div class="faq-body-inner">Absolutely. We design mobile-first, meaning your phone layout is built before the desktop version. We test on multiple screen sizes and devices before every delivery.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What do I need to get started?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
+      <div class="faq-body"><div class="faq-body-inner">Just your business name, a description of what you offer, any brand colors or fonts you use, and the content you want on the site. We guide you through everything else &mdash; no tech experience needed.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can you update my site after launch?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
+      <div class="faq-body"><div class="faq-body-inner">Yes &mdash; we offer ongoing maintenance and update services. Whether you need to change menu items, update prices, add new sections, or fix anything, we handle it quickly. Most updates are done same-day.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you work outside Lebanon?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
+      <div class="faq-body"><div class="faq-body-inner">Yes, 100% remote and worldwide. We&rsquo;ve worked with clients in Lebanon, the Gulf, Europe, and beyond. Communication happens over WhatsApp or email &mdash; wherever you are, we can work with you.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="about-left">
+    <div class="about-card">
+      <div class="about-big">15<span style="font-size:44px;color:var(--lime)">+</span></div>
+      <div class="about-big-sub">Projects Delivered</div>
+      <div class="about-bars">
+        <div>
+          <div class="a-bar-row"><span class="a-bar-label">Web Design</span><span class="a-bar-pct">98%</span></div>
+          <div class="a-bar-track"><div class="a-bar-fill" data-width="98"></div></div>
+        </div>
+        <div>
+          <div class="a-bar-row"><span class="a-bar-label">Front-End Dev</span><span class="a-bar-pct">95%</span></div>
+          <div class="a-bar-track"><div class="a-bar-fill" data-width="95"></div></div>
+        </div>
+        <div>
+          <div class="a-bar-row"><span class="a-bar-label">Brand Identity</span><span class="a-bar-pct">88%</span></div>
+          <div class="a-bar-track"><div class="a-bar-fill" data-width="88"></div></div>
+        </div>
+        <div>
+          <div class="a-bar-row"><span class="a-bar-label">Mobile Experience</span><span class="a-bar-pct">100%</span></div>
+          <div class="a-bar-track"><div class="a-bar-fill" data-width="100"></div></div>
+        </div>
+      </div>
+      <div class="about-float">Est. 2026 &middot; Lebanon</div>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// Who We Are</span></div>
+    <div class="about-title">WE ARE<br><span class="lime">NOVU</span><br>STUDIOS</div>
+    <p class="about-body">Novu Studios is a web design studio based in Lebanon that builds custom digital experiences for businesses that care about how they look online.</p>
+    <p class="about-body">We don&rsquo;t use templates. We don&rsquo;t use page builders. Every line of code is written by hand, every design is made from scratch &mdash; because your business deserves to stand out, not blend in with thousands of identical sites.</p>
+    <p class="about-body">Fast turnaround, premium quality, and a team that stays close after launch. That&rsquo;s the Novu promise.</p>
+    <div class="about-tags">
+      <span class="about-tag">Custom Code</span>
+      <span class="about-tag">No Templates</span>
+      <span class="about-tag">Mobile First</span>
+      <span class="about-tag">Fast Loading</span>
+      <span class="about-tag">48h Delivery</span>
+      <span class="about-tag">Worldwide</span>
+      <span class="about-tag">Lebanon &#127758;</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="contact-orb contact-orb-1"></div>
+  <div class="contact-orb contact-orb-2"></div>
+  <div class="contact-orb contact-orb-3"></div>
+  <div class="contact-avail">
+    <span class="contact-avail-dot"></span>
+    Available for new projects
+  </div>
+  <div class="contact-big">LET&rsquo;S<br><span class="lime">BUILD</span><br><span class="outline">SOMETHING</span></div>
+  <p class="contact-sub">Have a project in mind? Reach out via WhatsApp or email &mdash; we typically respond within a few hours and can start immediately.</p>
+  <div class="contact-actions">
+    <a href="https://wa.me/96170786131?text=Hi%20Novu%20Studios%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="btn-lime">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Us
+    </a>
+    <a href="mailto:novustudios@gmail.com" class="btn-outline">novustudios@gmail.com</a>
+  </div>
+  <div class="contact-info">
+    <a href="https://instagram.com/studiosnovu" target="_blank" rel="noopener" class="c-info"><div class="c-dot"></div>@studiosnovu</a>
+    <a href="https://wa.me/96170786131" target="_blank" rel="noopener" class="c-info"><div class="c-dot"></div>+961 70 786 131</a>
+    <span class="c-info"><div class="c-dot"></div>Worldwide &middot; Remote</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:11px;">
+        <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
+          <rect x="1" y="1" width="46" height="46" rx="10" stroke="var(--border-mid)" stroke-width="1.5"/>
+          <rect x="12" y="13" width="5.5" height="22" rx="1" fill="var(--off)"/>
+          <rect x="30.5" y="13" width="5.5" height="22" rx="1" fill="var(--off)"/>
+          <path d="M17.5 13 L30.5 35" stroke="#c8ff00" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <span style="font-family:'Oxanium',sans-serif;font-weight:800;font-size:13px;color:var(--off);letter-spacing:0.14em;">NOVU STUDIOS</span>
+      </div>
+      <p class="footer-tagline">Custom websites and digital identities for businesses that want to stand out &mdash; built by hand, built to last.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <div class="footer-col-links">
+        <a href="#services" class="footer-link">Restaurant Websites</a>
+        <a href="#services" class="footer-link">Digital Menus</a>
+        <a href="#services" class="footer-link">Landing Pages</a>
+        <a href="#services" class="footer-link">Brand Identity</a>
+        <a href="#services" class="footer-link">Maintenance</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <div class="footer-col-links">
+        <a href="#work"         class="footer-link">Our Work</a>
+        <a href="#process"      class="footer-link">Process</a>
+        <a href="#testimonials" class="footer-link">Reviews</a>
+        <a href="#pricing"      class="footer-link">Pricing</a>
+        <a href="#about"        class="footer-link">About</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Get in Touch</div>
+      <div class="footer-col-links">
+        <a href="https://wa.me/96170786131" target="_blank" rel="noopener" class="footer-link">WhatsApp</a>
+        <a href="mailto:novustudios@gmail.com" class="footer-link">novustudios@gmail.com</a>
+        <a href="https://instagram.com/studiosnovu" target="_blank" rel="noopener" class="footer-link">@studiosnovu</a>
+        <span class="footer-link" style="pointer-events:none;cursor:default;">Lebanon &#127758; &middot; Worldwide</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; <span id="year"></span> Novu Studios. All rights reserved.</span>
+    <span class="footer-made">Handcrafted with <span class="lime">&#9829;</span> in Lebanon</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
