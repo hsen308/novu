@@ -624,6 +624,17 @@ if (!isTouch) {
   });
 }
 
+// Click to open — ALL devices
+document.querySelectorAll('.work-card[data-href]').forEach(card => {
+  card.addEventListener('click', () => {
+    if (isTouch) {
+      window.location.href = card.dataset.href;
+    } else {
+      window.open(card.dataset.href, '_blank', 'noopener');
+    }
+  });
+});
+
 // Drag scroll
 const wTrack = document.getElementById('work-track');
 if (wTrack) {
