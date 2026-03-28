@@ -1155,6 +1155,15 @@ footer::before {
   .process-timeline { padding-left: 28px; }
   .p-step { padding: 28px 20px; }
   .faq-grid { gap: 0; }
+  .work-card { width: 260px; height: 360px; }
+  .work-card:first-child { width: 280px; }
+  .service-item { grid-template-columns: 40px 1fr; }
+  .service-icon { display: none; }
+}
+
+@media (max-width: 480px) {
+  .stats-inner { grid-template-columns: 1fr; }
+  .stat-item:nth-child(3) { border-right: none; }
 }
 
 /* ─── TOUCH — disable heavy desktop effects ── */
