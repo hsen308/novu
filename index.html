@@ -3,14 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Novu Studios — Custom websites and digital identities built from scratch. Professional web design for restaurants, cafés, and businesses worldwide.">
+<meta name="description" content="Novu Studios — Custom websites and digital identities for restaurants, cafés, hotels, and hospitality brands worldwide. Handcrafted code, zero templates, SEO-optimized.">
+<meta name="keywords" content="web design, restaurant website, cafe website, hotel website, hospitality web design, digital menu, SEO, local SEO, landing page, brand identity, custom website, Lebanon, worldwide">
+<meta name="author" content="Novu Studios">
+<meta name="robots" content="index, follow">
 <title>Novu Studios — Web Design &amp; Digital Identity</title>
+<link rel="canonical" href="https://novu-mu.vercel.app/">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://novu-mu.vercel.app/">
+<meta property="og:title"       content="Novu Studios — Web Design &amp; Digital Identity">
+<meta property="og:description" content="Custom websites and digital identities for restaurants, cafés, hotels, and hospitality brands worldwide. Handcrafted code, zero templates, SEO-optimized.">
+<meta property="og:site_name"   content="Novu Studios">
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Novu Studios — Web Design &amp; Digital Identity">
+<meta name="twitter:description" content="Custom websites for restaurants, cafés, hotels, and hospitality brands. Handcrafted, fast, SEO-optimized.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@200;300;400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <link rel="stylesheet" href="main.css">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://novu-mu.vercel.app/#org",
+      "name": "Novu Studios",
+      "url": "https://novu-mu.vercel.app/",
+      "logo": "https://novu-mu.vercel.app/",
+      "description": "Custom web design studio specializing in restaurants, cafés, hotels, and hospitality brands worldwide.",
+      "foundingDate": "2026",
+      "areaServed": "Worldwide",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "novustudios@gmail.com",
+        "availableLanguage": ["English", "Arabic"]
+      },
+      "sameAs": [
+        "https://instagram.com/studiosnovu",
+        "https://wa.me/96170786131"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://novu-mu.vercel.app/#website",
+      "url": "https://novu-mu.vercel.app/",
+      "name": "Novu Studios",
+      "publisher": { "@id": "https://novu-mu.vercel.app/#org" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "Novu Studios",
+      "url": "https://novu-mu.vercel.app/",
+      "priceRange": "$$",
+      "description": "Web design studio building custom websites for restaurants, cafés, hotels, and hospitality brands.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web Design Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hospitality & Restaurant Websites" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Menus" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Landing Pages" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & Google Visibility" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Identity & Logo" } }
+        ]
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -113,7 +184,7 @@
       <defs>
         <path id="badge-path" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
       </defs>
-      <text><textPath href="#badge-path" startOffset="0%">WEB DESIGN &middot; EST. 2026 &middot; LEBANON &middot; NOVU STUDIOS &middot; </textPath></text>
+      <text><textPath href="#badge-path" startOffset="0%">WEB DESIGN &middot; EST. 2026 &middot; WORLDWIDE &middot; NOVU STUDIOS &middot; </textPath></text>
     </svg>
     <div class="hero-badge-inner"><span class="hero-badge-n">N</span></div>
   </div>
@@ -129,7 +200,7 @@
       <span class="line"><span class="word">THAT <span class="outline">WORK</span></span></span>
     </h1>
     <div class="hero-bottom">
-      <p class="hero-desc">Custom websites and digital identities for restaurants, caf&eacute;s, and businesses that want to stand out &mdash; handcrafted code, zero templates, built to convert.</p>
+      <p class="hero-desc">Custom websites and digital identities for restaurants, caf&eacute;s, hotels, and hospitality brands worldwide &mdash; handcrafted code, zero templates, SEO-optimized, built to convert.</p>
       <div class="hero-actions">
         <a href="#work"    class="btn-lime">View Our Work</a>
         <a href="#contact" class="btn-outline">Start a Project</a>
@@ -164,19 +235,19 @@
     <div class="marquee-track">
       <div class="m-item">Restaurant Websites<span class="m-dot"></span></div>
       <div class="m-item">Digital Menus<span class="m-dot"></span></div>
-      <div class="m-item">Business Sites<span class="m-dot"></span></div>
+      <div class="m-item">Hotel &amp; Hospitality Sites<span class="m-dot"></span></div>
       <div class="m-item">Landing Pages<span class="m-dot"></span></div>
+      <div class="m-item hi">SEO Optimization<span class="m-dot"></span></div>
       <div class="m-item">Brand Identity<span class="m-dot"></span></div>
-      <div class="m-item">Portfolio Sites<span class="m-dot"></span></div>
-      <div class="m-item">Mobile First<span class="m-dot"></span></div>
+      <div class="m-item">Google Rankings<span class="m-dot"></span></div>
       <div class="m-item hi">Pure Custom Code<span class="m-dot"></span></div>
       <div class="m-item">Restaurant Websites<span class="m-dot"></span></div>
       <div class="m-item">Digital Menus<span class="m-dot"></span></div>
-      <div class="m-item">Business Sites<span class="m-dot"></span></div>
+      <div class="m-item">Hotel &amp; Hospitality Sites<span class="m-dot"></span></div>
       <div class="m-item">Landing Pages<span class="m-dot"></span></div>
+      <div class="m-item hi">SEO Optimization<span class="m-dot"></span></div>
       <div class="m-item">Brand Identity<span class="m-dot"></span></div>
-      <div class="m-item">Portfolio Sites<span class="m-dot"></span></div>
-      <div class="m-item">Mobile First<span class="m-dot"></span></div>
+      <div class="m-item">Google Rankings<span class="m-dot"></span></div>
       <div class="m-item hi">Pure Custom Code<span class="m-dot"></span></div>
     </div>
   </div>
@@ -193,11 +264,17 @@
       <div class="m-item hi">BLCK Coffee &middot; Beirut<span class="m-dot"></span></div>
       <div class="m-item">Ikigai &middot; Fine Dining<span class="m-dot"></span></div>
       <div class="m-item">Hamburghini &middot; Kfarsir<span class="m-dot"></span></div>
-      <div class="m-item hi">Krema Caf&eacute;<span class="m-dot"></span></div>
+      <div class="m-item hi">SEO Ready &middot; Always<span class="m-dot"></span></div>
       <div class="m-item">Cafe Mate &middot; Batroun<span class="m-dot"></span></div>
       <div class="m-item">Oak &middot; Caf&eacute; &amp; Bar<span class="m-dot"></span></div>
       <div class="m-item hi">48h Delivery<span class="m-dot"></span></div>
       <div class="m-item">No Templates &middot; Ever<span class="m-dot"></span></div>
+      <div class="m-item hi">BLCK Coffee &middot; Beirut<span class="m-dot"></span></div>
+      <div class="m-item">Ikigai &middot; Fine Dining<span class="m-dot"></span></div>
+      <div class="m-item">Hamburghini &middot; Kfarsir<span class="m-dot"></span></div>
+      <div class="m-item hi">SEO Ready &middot; Always<span class="m-dot"></span></div>
+      <div class="m-item">Cafe Mate &middot; Batroun<span class="m-dot"></span></div>
+      <div class="m-item">Oak &middot; Caf&eacute; &amp; Bar<span class="m-dot"></span></div>
     </div>
   </div>
 </div>
@@ -247,8 +324,8 @@
         </svg>
       </div>
       <div>
-        <div class="service-name">Restaurant &amp; Caf&eacute; Websites</div>
-        <div class="service-body">Full custom websites for food &amp; beverage brands &mdash; digital menus, gallery, booking links, and a visual identity that matches your space perfectly.</div>
+        <div class="service-name">Hospitality &amp; Restaurant Websites</div>
+        <div class="service-body">Full custom websites for restaurants, caf&eacute;s, hotels, bars, and food brands &mdash; digital menus, gallery, booking links, and a visual identity that matches your brand perfectly.</div>
       </div>
       <div class="service-tags"><span class="s-tag">Design</span><span class="s-tag">Dev</span></div>
     </div>
@@ -323,6 +400,23 @@
       </div>
       <div class="service-tags"><span class="s-tag">Support</span></div>
     </div>
+
+    <div class="service-item">
+      <div class="service-num">07</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle class="icon-path" cx="11" cy="11" r="8"/>
+          <line class="icon-path" x1="21" y1="21" x2="16.65" y2="16.65"/>
+          <line class="icon-path" x1="11" y1="8" x2="11" y2="14"/>
+          <line class="icon-path" x1="8" y1="11" x2="14" y2="11"/>
+        </svg>
+      </div>
+      <div>
+        <div class="service-name">SEO &amp; Google Visibility</div>
+        <div class="service-body">On-page SEO, local search optimization, Google Business setup, and ongoing keyword strategy &mdash; so the right customers find you, in the right place, at the right time.</div>
+      </div>
+      <div class="service-tags"><span class="s-tag">SEO</span><span class="s-tag">Local</span><span class="s-tag">Strategy</span></div>
+    </div>
   </div>
 </section>
 
@@ -378,310 +472,393 @@
     </div>
   </div>
 
-  <div class="work-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="restaurant">Restaurant</button>
-    <button class="filter-btn" data-filter="cafe">Caf&eacute;</button>
-    <button class="filter-btn" data-filter="menu">Digital Menu</button>
-  </div>
-
   <div class="work-track" id="work-track">
 
-    <!-- BLCK -->
-    <div class="work-card" data-cat="restaurant" data-href="https://hsen308.github.io/blck/">
-      <div class="work-img">
-        <svg width="100%" height="100%" viewBox="0 0 580 540" fill="none" preserveAspectRatio="xMidYMid slice">
-          <rect width="580" height="540" fill="#0f172a"/>
-          <rect width="580" height="540" fill="url(#blck-g)" opacity="0.5"/>
-          <defs><radialGradient id="blck-g" cx="30%" cy="20%"><stop offset="0%" stop-color="#c8a96e" stop-opacity="0.12"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
-          <rect x="0" y="0" width="580" height="52" fill="rgba(15,23,42,0.95)"/>
-          <text x="36" y="32" fill="#c8a96e" font-family="monospace" font-size="14" font-weight="bold" letter-spacing="3">BLCK</text>
-          <text x="440" y="32" fill="#64748b" font-family="monospace" font-size="9" letter-spacing="2">MENU</text>
-          <text x="496" y="32" fill="#64748b" font-family="monospace" font-size="9" letter-spacing="2">FIND US</text>
-          <text x="36" y="140" fill="#f1f5f9" font-family="serif" font-size="52" font-weight="bold" letter-spacing="6">BLCK</text>
-          <text x="36" y="178" fill="#c8a96e" font-family="monospace" font-size="13" letter-spacing="4">SPECIALTY COFFEE</text>
-          <text x="36" y="210" fill="#64748b" font-family="monospace" font-size="10" font-style="italic">Respect the Beans.</text>
-          <rect x="36" y="228" width="110" height="32" fill="#c8a96e"/>
-          <text x="68" y="248" fill="#0f172a" font-family="monospace" font-size="9" font-weight="bold" letter-spacing="2">VIEW MENU</text>
-          <rect x="0" y="290" width="580" height="42" fill="rgba(15,23,42,0.9)"/>
-          <rect x="20" y="302" width="60" height="18" rx="9" fill="#c8a96e"/>
-          <text x="36" y="314" fill="#0f172a" font-family="monospace" font-size="8" letter-spacing="1">Coffee</text>
-          <text x="100" y="314" fill="#475569" font-family="monospace" font-size="8">Cold Drinks</text>
-          <text x="192" y="314" fill="#475569" font-family="monospace" font-size="8">Smoothies</text>
-          <text x="272" y="314" fill="#475569" font-family="monospace" font-size="8">Food</text>
-          <text x="320" y="314" fill="#475569" font-family="monospace" font-size="8">Bakery</text>
-          <rect x="36" y="355" width="500" height="1" fill="#1e293b"/>
-          <text x="36" y="376" fill="#f1f5f9" font-family="monospace" font-size="11">Espresso</text>
-          <rect x="36" y="390" width="500" height="1" fill="#1e293b"/>
-          <text x="36" y="411" fill="#f1f5f9" font-family="monospace" font-size="11">Cappuccino</text>
-          <rect x="36" y="425" width="500" height="1" fill="#1e293b"/>
-          <text x="36" y="446" fill="#f1f5f9" font-family="monospace" font-size="11">Latte</text>
-          <rect x="36" y="460" width="500" height="1" fill="#1e293b"/>
-          <text x="36" y="481" fill="#f1f5f9" font-family="monospace" font-size="11">V60 Pour Over</text>
-          <rect x="36" y="495" width="500" height="1" fill="#1e293b"/>
-        </svg>
-        <div class="work-gradient"></div>
-      </div>
-      <div class="work-info">
-        <div class="w-cat">Specialty Coffee &middot; Beirut</div>
-        <div class="w-title">BLCK Specialty Coffee</div>
-        <div class="w-desc">Single-page menu site with sticky section navigation, loader animation, and mobile-first responsive layout.</div>
-        <div class="w-link">View Project &#8599;</div>
-      </div>
-    </div>
-
-    <!-- Ikigai -->
-    <div class="work-card" data-cat="restaurant" data-href="https://hsen308.github.io/ikigai/">
-      <div class="work-img">
-        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
-          <rect width="420" height="540" fill="#faf8f5"/>
-          <defs><radialGradient id="ik-g" cx="50%" cy="0%"><stop offset="0%" stop-color="#c9a961" stop-opacity="0.1"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
-          <rect width="420" height="110" fill="#5c1a1a"/>
-          <text x="210" y="52" text-anchor="middle" fill="#c9a961" font-family="serif" font-size="32" font-style="italic" letter-spacing="3">Ikigai</text>
-          <text x="210" y="76" text-anchor="middle" fill="rgba(201,169,97,0.6)" font-family="monospace" font-size="8" letter-spacing="5">FINE DINING</text>
-          <line x1="170" y1="88" x2="250" y2="88" stroke="#c9a961" stroke-width="0.5" opacity="0.5"/>
-          <text x="210" y="155" text-anchor="middle" fill="#1a1410" font-family="serif" font-size="20" font-style="italic">Our Menu</text>
-          <line x1="160" y1="168" x2="260" y2="168" stroke="#c9a961" stroke-width="1"/>
-          <text x="36" y="210" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Halloumi Pesto Bagel</text>
-          <text x="36" y="228" fill="#8a7a6a" font-family="monospace" font-size="8">Halloumi, pesto, tomato &amp; greens</text>
-          <line x1="36" y1="240" x2="384" y2="240" stroke="#e8d7b5" stroke-width="0.5"/>
-          <text x="36" y="268" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Smoked Salmon Bagel</text>
-          <text x="36" y="286" fill="#8a7a6a" font-family="monospace" font-size="8">Smoked salmon, cream cheese, capers</text>
-          <line x1="36" y1="298" x2="384" y2="298" stroke="#e8d7b5" stroke-width="0.5"/>
-          <text x="36" y="326" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Smoked Chicken Caesar</text>
-          <text x="36" y="344" fill="#8a7a6a" font-family="monospace" font-size="8">Mixed greens, smoked chicken, parmesan</text>
-          <line x1="36" y1="356" x2="384" y2="356" stroke="#e8d7b5" stroke-width="0.5"/>
-          <rect x="36" y="400" width="40" height="1" fill="#c9a961"/>
-          <text x="36" y="425" fill="#5c1a1a" font-family="serif" font-size="11" font-style="italic">Find Us in Beirut</text>
-          <text x="36" y="444" fill="#8a7a6a" font-family="monospace" font-size="8" letter-spacing="1">Open Daily 8AM &mdash; 10PM</text>
-        </svg>
-        <div class="work-gradient"></div>
-      </div>
-      <div class="work-info">
-        <div class="w-cat">Fine Dining &middot; Beirut</div>
-        <div class="w-title">Ikigai</div>
-        <div class="w-desc">Premium restaurant menu with elegant cream &amp; burgundy palette, serif typography, and smooth scroll reveal animations.</div>
-        <div class="w-link">View Project &#8599;</div>
-      </div>
-    </div>
-
-    <!-- Hamburghini -->
-    <div class="work-card" data-cat="restaurant" data-href="https://hsen308.github.io/hamburghini/">
-      <div class="work-img">
-        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
-          <rect width="420" height="540" fill="#f5f5f5"/>
-          <rect width="420" height="56" fill="white"/>
-          <rect x="0" y="55" width="420" height="1" fill="#eee"/>
-          <text x="28" y="35" fill="#1a1a1a" font-family="serif" font-size="22" font-weight="bold" letter-spacing="1">Hamburghini</text>
-          <rect width="420" height="220" fill="#1a1a1a" y="56"/>
-          <defs><radialGradient id="hb-g" cx="70%" cy="50%"><stop offset="0%" stop-color="#FF6B35" stop-opacity="0.3"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
-          <rect width="420" height="220" fill="url(#hb-g)" y="56"/>
-          <text x="28" y="128" fill="white" font-family="serif" font-size="36" font-weight="bold">BEST</text>
-          <text x="28" y="168" fill="#FF6B35" font-family="serif" font-size="36" font-weight="bold">BURGERS</text>
-          <text x="28" y="198" fill="#888" font-family="monospace" font-size="9" letter-spacing="2">KFARSIR, LEBANON</text>
-          <rect x="28" y="212" width="110" height="36" fill="#FF6B35"/>
-          <text x="60" y="234" fill="white" font-family="monospace" font-size="9" font-weight="bold" letter-spacing="2">ORDER NOW</text>
-          <rect x="20" y="294" width="115" height="110" rx="6" fill="white"/>
-          <rect x="20" y="294" width="115" height="60" rx="6" fill="#FF6B35" opacity="0.15"/>
-          <text x="77" y="330" text-anchor="middle" fill="#FF6B35" font-family="serif" font-size="22">&#127828;</text>
-          <text x="77" y="368" text-anchor="middle" fill="#1a1a1a" font-family="monospace" font-size="8" font-weight="bold">Classic</text>
-          <text x="77" y="382" text-anchor="middle" fill="#888" font-family="monospace" font-size="7">$8.99</text>
-          <rect x="150" y="294" width="115" height="110" rx="6" fill="white"/>
-          <rect x="150" y="294" width="115" height="60" rx="6" fill="#FF6B35" opacity="0.15"/>
-          <text x="207" y="330" text-anchor="middle" fill="#FF6B35" font-family="serif" font-size="22">&#127839;</text>
-          <text x="207" y="368" text-anchor="middle" fill="#1a1a1a" font-family="monospace" font-size="8" font-weight="bold">Fries</text>
-          <text x="207" y="382" text-anchor="middle" fill="#888" font-family="monospace" font-size="7">$3.99</text>
-          <rect x="280" y="294" width="115" height="110" rx="6" fill="white"/>
-          <rect x="280" y="294" width="115" height="60" rx="6" fill="#FF6B35" opacity="0.15"/>
-          <text x="337" y="330" text-anchor="middle" fill="#FF6B35" font-family="serif" font-size="22">&#127822;</text>
-          <text x="337" y="368" text-anchor="middle" fill="#1a1a1a" font-family="monospace" font-size="8" font-weight="bold">Shake</text>
-          <text x="337" y="382" text-anchor="middle" fill="#888" font-family="monospace" font-size="7">$4.99</text>
-          <rect x="0" y="440" width="420" height="100" fill="#1a1a1a"/>
-          <text x="28" y="480" fill="white" font-family="serif" font-size="16" font-weight="bold">Hamburghini</text>
-          <text x="28" y="500" fill="#555" font-family="monospace" font-size="8" letter-spacing="1">Kfarsir, Lebanon</text>
-        </svg>
-        <div class="work-gradient"></div>
-      </div>
-      <div class="work-info">
-        <div class="w-cat">Burger Restaurant &middot; Kfarsir</div>
-        <div class="w-title">Hamburghini</div>
-        <div class="w-desc">Multi-design showcase with a built-in version selector &mdash; 4 distinct layouts for the client to choose from, all in one file.</div>
-        <div class="w-link">View Project &#8599;</div>
-      </div>
-    </div>
-
-    <!-- Krema -->
+    <!-- Krema — #1 most feature-rich -->
     <div class="work-card" data-cat="cafe" data-href="https://hsen308.github.io/krema/">
       <div class="work-img">
         <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
-          <rect width="420" height="540" fill="#FFF8F0"/>
-          <rect width="420" height="70" fill="white"/>
-          <text x="210" y="28" text-anchor="middle" fill="#2C1810" font-family="serif" font-size="22" font-weight="bold" letter-spacing="2">Krema</text>
-          <text x="210" y="50" text-anchor="middle" fill="#8B6F47" font-family="monospace" font-size="8" letter-spacing="4">PREMIUM CAFE</text>
-          <line x1="36" y1="80" x2="384" y2="80" stroke="#f0e6d8" stroke-width="1"/>
-          <text x="36" y="128" fill="#2C1810" font-family="serif" font-size="28" font-style="italic">Artisan Coffee</text>
-          <text x="36" y="156" fill="#2C1810" font-family="serif" font-size="28" font-style="italic">&amp; Fresh Bagels</text>
-          <text x="36" y="184" fill="#8B6F47" font-family="monospace" font-size="9">A cozy corner for coffee lovers</text>
-          <rect x="36" y="202" width="100" height="30" rx="3" fill="#8B6F47"/>
-          <text x="64" y="221" fill="white" font-family="monospace" font-size="8" letter-spacing="1">Our Menu</text>
-          <rect x="0" y="256" width="420" height="1" fill="#f0e6d8"/>
-          <text x="36" y="288" fill="#2C1810" font-family="serif" font-size="14" font-style="italic">Espresso Drinks</text>
-          <text x="36" y="316" fill="#2C1810" font-family="monospace" font-size="10">Flat White</text>
-          <text x="370" y="316" text-anchor="end" fill="#8B6F47" font-family="monospace" font-size="10">$5</text>
-          <line x1="36" y1="326" x2="384" y2="326" stroke="#f0e6d8" stroke-width="0.5"/>
-          <text x="36" y="346" fill="#2C1810" font-family="monospace" font-size="10">Caramel Latte</text>
-          <text x="370" y="346" text-anchor="end" fill="#8B6F47" font-family="monospace" font-size="10">$6</text>
-          <line x1="36" y1="356" x2="384" y2="356" stroke="#f0e6d8" stroke-width="0.5"/>
-          <text x="36" y="376" fill="#2C1810" font-family="monospace" font-size="10">V60 Pour Over</text>
-          <text x="370" y="376" text-anchor="end" fill="#8B6F47" font-family="monospace" font-size="10">$7</text>
-          <line x1="36" y1="386" x2="384" y2="386" stroke="#f0e6d8" stroke-width="0.5"/>
-          <circle cx="210" cy="470" r="36" fill="#FFF0E0" stroke="#f0e6d8" stroke-width="1"/>
-          <text x="210" y="476" text-anchor="middle" fill="#8B6F47" font-family="serif" font-size="24">K</text>
+          <defs>
+            <linearGradient id="kr-hero" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF8F0"/><stop offset="100%" stop-color="#FAF0E4"/></linearGradient>
+            <radialGradient id="kr-glow" cx="80%" cy="30%"><stop offset="0%" stop-color="#c9a96e" stop-opacity="0.12"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          </defs>
+          <rect width="420" height="540" fill="url(#kr-hero)"/>
+          <rect width="420" height="540" fill="url(#kr-glow)"/>
+          <!-- Nav -->
+          <rect width="420" height="58" fill="rgba(255,255,255,0.92)"/>
+          <rect x="0" y="57" width="420" height="1" fill="#f0e6d8"/>
+          <text x="210" y="30" text-anchor="middle" fill="#2C1810" font-family="serif" font-size="17" font-weight="700" letter-spacing="3">KREMA</text>
+          <text x="210" y="46" text-anchor="middle" fill="#c9a96e" font-family="monospace" font-size="6" letter-spacing="5">ARTISAN CAFÉ</text>
+          <text x="316" y="33" fill="#2C1810" font-family="sans-serif" font-size="7" letter-spacing="1">Menu</text>
+          <text x="352" y="33" fill="#2C1810" font-family="sans-serif" font-size="7" letter-spacing="1">About</text>
+          <text x="388" y="33" fill="#2C1810" font-family="sans-serif" font-size="7" letter-spacing="1">Visit</text>
+          <!-- Hero -->
+          <text x="36" y="130" fill="#2C1810" font-family="serif" font-size="38" font-style="italic" letter-spacing="-0.5">Artisan</text>
+          <text x="36" y="172" fill="#2C1810" font-family="serif" font-size="38" font-style="italic" letter-spacing="-0.5">Coffee &amp;</text>
+          <text x="36" y="214" fill="#2C1810" font-family="serif" font-size="38" font-style="italic" letter-spacing="-0.5">Fresh Bagels</text>
+          <text x="36" y="238" fill="#9c7c5a" font-family="sans-serif" font-size="9" letter-spacing="1">A cozy corner for coffee lovers in Lebanon</text>
+          <rect x="36" y="256" width="108" height="32" rx="3" fill="#8B6F47"/>
+          <text x="90" y="276" text-anchor="middle" fill="white" font-family="monospace" font-size="8" letter-spacing="2">OUR MENU</text>
+          <rect x="156" y="256" width="108" height="32" rx="3" fill="transparent" stroke="#D4B896" stroke-width="1"/>
+          <text x="210" y="276" text-anchor="middle" fill="#8B6F47" font-family="monospace" font-size="8" letter-spacing="2">FIND US</text>
+          <!-- Divider -->
+          <rect x="0" y="306" width="420" height="1" fill="#f0e6d8"/>
+          <!-- Menu section -->
+          <text x="36" y="336" fill="#c9a96e" font-family="monospace" font-size="7" letter-spacing="4">ESPRESSO DRINKS</text>
+          <line x1="36" y1="346" x2="384" y2="346" stroke="#f0e6d8" stroke-width="0.75"/>
+          <text x="36" y="366" fill="#2C1810" font-family="serif" font-size="12" font-style="italic">Flat White</text>
+          <text x="36" y="381" fill="#a08060" font-family="sans-serif" font-size="8">Ristretto, steamed milk, microfoam</text>
+          <line x1="36" y1="390" x2="384" y2="390" stroke="#f0e6d8" stroke-width="0.5"/>
+          <text x="36" y="410" fill="#2C1810" font-family="serif" font-size="12" font-style="italic">Caramel Latte</text>
+          <text x="36" y="425" fill="#a08060" font-family="sans-serif" font-size="8">Espresso, salted caramel, oat milk</text>
+          <line x1="36" y1="434" x2="384" y2="434" stroke="#f0e6d8" stroke-width="0.5"/>
+          <text x="36" y="454" fill="#2C1810" font-family="serif" font-size="12" font-style="italic">V60 Pour Over</text>
+          <text x="36" y="469" fill="#a08060" font-family="sans-serif" font-size="8">Single origin, filter roast</text>
+          <line x1="36" y1="478" x2="384" y2="478" stroke="#f0e6d8" stroke-width="0.5"/>
+          <!-- Footer strip -->
+          <rect x="0" y="508" width="420" height="32" fill="#2C1810"/>
+          <text x="210" y="528" text-anchor="middle" fill="rgba(201,169,97,0.7)" font-family="monospace" font-size="7" letter-spacing="3">KREMA · ARTISAN CAFÉ</text>
         </svg>
         <div class="work-gradient"></div>
       </div>
       <div class="work-info">
-        <div class="w-cat">Premium Caf&eacute;</div>
+        <div class="w-cat">Premium Caf&eacute; &middot; Lebanon</div>
         <div class="w-title">Krema Caf&eacute;</div>
-        <div class="w-desc">Warm, artisan caf&eacute; website with Playfair Display typography, cream palette, and rich hover interactions throughout.</div>
+        <div class="w-desc">Warm artisan caf&eacute; site with Playfair Display, cream &amp; espresso palette, rich hover interactions, and a full multi-section layout.</div>
         <div class="w-link">View Project &#8599;</div>
       </div>
     </div>
 
-    <!-- Cafe Mate -->
+    <!-- Cafe Mate — #2 most complex, editorial -->
     <div class="work-card" data-cat="cafe" data-href="https://hsen308.github.io/matecafe/">
       <div class="work-img">
         <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="cm-glow" cx="50%" cy="80%"><stop offset="0%" stop-color="#2d7a4a" stop-opacity="0.35"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+            <radialGradient id="cm-top" cx="20%" cy="10%"><stop offset="0%" stop-color="#1a3a28" stop-opacity="0.6"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          </defs>
           <rect width="420" height="540" fill="#080d0a"/>
-          <defs><radialGradient id="cm-g" cx="50%" cy="100%"><stop offset="0%" stop-color="#2d7a4a" stop-opacity="0.25"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
-          <rect width="420" height="540" fill="url(#cm-g)" opacity="0.7"/>
-          <text x="210" y="80" text-anchor="middle" fill="#e8f0e3" font-family="serif" font-size="28" font-style="italic" letter-spacing="2">Cafe Mate</text>
-          <text x="210" y="104" text-anchor="middle" fill="#2d7a4a" font-family="monospace" font-size="8" letter-spacing="5">BATROUN &middot; LEBANON</text>
-          <line x1="36" y1="150" x2="384" y2="150" stroke="#1e3025" stroke-width="1"/>
-          <text x="36" y="190" fill="#e8f0e3" font-family="serif" font-size="15" font-style="italic">Coffee</text>
-          <line x1="36" y1="205" x2="384" y2="205" stroke="#1e3025" stroke-width="0.5"/>
-          <text x="36" y="228" fill="#88a890" font-family="monospace" font-size="9">Espresso</text>
-          <line x1="36" y1="240" x2="384" y2="240" stroke="#1e3025" stroke-width="0.5"/>
-          <text x="36" y="263" fill="#88a890" font-family="monospace" font-size="9">V60 Pour Over</text>
-          <line x1="36" y1="275" x2="384" y2="275" stroke="#1e3025" stroke-width="0.5"/>
-          <text x="36" y="298" fill="#88a890" font-family="monospace" font-size="9">Cold Brew</text>
-          <line x1="36" y1="310" x2="384" y2="310" stroke="#1e3025" stroke-width="0.5"/>
-          <text x="36" y="360" fill="#e8f0e3" font-family="serif" font-size="15" font-style="italic">Pastries</text>
-          <line x1="36" y1="375" x2="384" y2="375" stroke="#1e3025" stroke-width="0.5"/>
-          <text x="36" y="398" fill="#88a890" font-family="monospace" font-size="9">Croissant</text>
-          <line x1="36" y1="410" x2="384" y2="410" stroke="#1e3025" stroke-width="0.5"/>
-          <text x="36" y="433" fill="#88a890" font-family="monospace" font-size="9">Almond Cookie</text>
-          <circle cx="210" cy="490" r="4" fill="#2d7a4a"/>
+          <rect width="420" height="540" fill="url(#cm-glow)"/>
+          <rect width="420" height="540" fill="url(#cm-top)"/>
+          <!-- Nav -->
+          <rect width="420" height="52" fill="rgba(8,13,10,0.9)"/>
+          <text x="36" y="32" fill="#e8f0e3" font-family="serif" font-size="13" font-style="italic" letter-spacing="2">Cafe Mate</text>
+          <text x="36" y="44" fill="#2d7a4a" font-family="monospace" font-size="6" letter-spacing="4">BATROUN · LB</text>
+          <text x="310" y="30" fill="#4a6a52" font-family="monospace" font-size="7" letter-spacing="1">Menu</text>
+          <text x="348" y="30" fill="#4a6a52" font-family="monospace" font-size="7" letter-spacing="1">Story</text>
+          <text x="384" y="30" fill="#4a6a52" font-family="monospace" font-size="7" letter-spacing="1">Visit</text>
+          <!-- Hero big text -->
+          <text x="36" y="138" fill="#e8f0e3" font-family="serif" font-size="58" font-style="italic" letter-spacing="-1" opacity="0.95">Where</text>
+          <text x="36" y="198" fill="#e8f0e3" font-family="serif" font-size="58" font-style="italic" letter-spacing="-1" opacity="0.95">Coffee</text>
+          <text x="36" y="258" fill="#2d7a4a" font-family="serif" font-size="58" font-style="italic" letter-spacing="-1">Begins.</text>
+          <line x1="36" y1="276" x2="130" y2="276" stroke="#2d7a4a" stroke-width="0.75"/>
+          <text x="36" y="296" fill="#7a9a82" font-family="monospace" font-size="8" letter-spacing="2">SPECIALTY · BATROUN</text>
+          <rect x="36" y="312" width="96" height="28" rx="2" fill="#2d7a4a"/>
+          <text x="84" y="330" text-anchor="middle" fill="#e8f0e3" font-family="monospace" font-size="8" letter-spacing="2">EXPLORE</text>
+          <!-- Menu listing -->
+          <rect x="0" y="358" width="420" height="1" fill="#1a2e20"/>
+          <text x="36" y="382" fill="#4a6a52" font-family="monospace" font-size="7" letter-spacing="4">COFFEE</text>
+          <line x1="36" y1="392" x2="384" y2="392" stroke="#1a2e20" stroke-width="0.75"/>
+          <text x="36" y="412" fill="#c4d4c8" font-family="serif" font-size="12" font-style="italic">Espresso</text>
+          <line x1="36" y1="424" x2="384" y2="424" stroke="#1a2e20" stroke-width="0.5"/>
+          <text x="36" y="444" fill="#c4d4c8" font-family="serif" font-size="12" font-style="italic">V60 Pour Over</text>
+          <line x1="36" y1="456" x2="384" y2="456" stroke="#1a2e20" stroke-width="0.5"/>
+          <text x="36" y="476" fill="#c4d4c8" font-family="serif" font-size="12" font-style="italic">Cold Brew</text>
+          <line x1="36" y1="488" x2="384" y2="488" stroke="#1a2e20" stroke-width="0.5"/>
+          <circle cx="390" cy="520" r="14" fill="none" stroke="#2d7a4a" stroke-width="0.75" opacity="0.4"/>
+          <circle cx="390" cy="520" r="6" fill="#2d7a4a" opacity="0.5"/>
         </svg>
         <div class="work-gradient"></div>
       </div>
       <div class="work-info">
         <div class="w-cat">Coffee Shop &middot; Batroun</div>
         <div class="w-title">Cafe Mate</div>
-        <div class="w-desc">Editorial dark-green caf&eacute; site with Cormorant Garamond and Cinzel typography &mdash; minimal, elegant, deeply atmospheric.</div>
+        <div class="w-desc">Editorial dark-green caf&eacute; with Cormorant Garamond and Cinzel &mdash; atmospheric, minimal, and deeply intentional in every detail.</div>
         <div class="w-link">View Project &#8599;</div>
       </div>
     </div>
 
-    <!-- Bana Cafe -->
-    <div class="work-card" data-cat="cafe" data-href="https://hsen308.github.io/bana-cafe/">
+    <!-- BLCK — #3 active project -->
+    <div class="work-card" data-cat="restaurant" data-href="https://hsen308.github.io/blck/">
       <div class="work-img">
         <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
-          <!-- Cream background -->
-          <rect width="420" height="540" fill="#FFF8F5"/>
+          <defs>
+            <radialGradient id="blck-glow" cx="75%" cy="25%"><stop offset="0%" stop-color="#c8a96e" stop-opacity="0.14"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          </defs>
+          <rect width="420" height="540" fill="#0f172a"/>
+          <rect width="420" height="540" fill="url(#blck-glow)"/>
           <!-- Nav -->
-          <rect width="420" height="52" fill="#ffffff"/>
-          <circle cx="36" cy="26" r="13" fill="none" stroke="#E8522A" stroke-width="1.5"/>
-          <text x="36" y="31" text-anchor="middle" fill="#E8522A" font-family="serif" font-size="13" font-weight="700">B</text>
-          <text x="116" y="30" fill="#1a1a1a" font-family="sans-serif" font-size="8" letter-spacing="0.5">Menu</text>
-          <text x="164" y="30" fill="#1a1a1a" font-family="sans-serif" font-size="8" letter-spacing="0.5">About</text>
-          <text x="216" y="30" fill="#1a1a1a" font-family="sans-serif" font-size="8" letter-spacing="0.5">Find Us</text>
-          <rect x="318" y="14" width="74" height="24" rx="12" fill="#E8522A"/>
-          <text x="355" y="30" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8" font-weight="700">Order Now</text>
-          <!-- Hero orange -->
-          <rect y="52" width="420" height="210" fill="#E8522A"/>
-          <circle cx="350" cy="157" r="95" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
-          <circle cx="350" cy="157" r="62" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
-          <text x="36" y="118" fill="white" font-family="serif" font-size="46" font-weight="700">Bana</text>
-          <text x="36" y="164" fill="white" font-family="serif" font-size="46" font-weight="700">Café</text>
-          <text x="36" y="190" fill="rgba(255,255,255,0.65)" font-family="sans-serif" font-size="8" letter-spacing="2">SPECIALTY COFFEE &amp; MORE</text>
-          <rect x="36" y="204" width="88" height="26" rx="13" fill="white"/>
-          <text x="80" y="220" text-anchor="middle" fill="#E8522A" font-family="sans-serif" font-size="8" font-weight="700">Our Menu</text>
-          <!-- Feature pills -->
-          <rect y="262" width="420" height="62" fill="#F2EAE4"/>
-          <rect x="28" y="280" width="66" height="26" rx="6" fill="#EBF5EE"/>
-          <text x="61" y="296" text-anchor="middle" fill="#4A7C59" font-family="sans-serif" font-size="8" font-weight="600">🌿 Fresh</text>
-          <rect x="106" y="280" width="90" height="26" rx="6" fill="#EBF5EE"/>
-          <text x="151" y="296" text-anchor="middle" fill="#4A7C59" font-family="sans-serif" font-size="8" font-weight="600">✦ Handcrafted</text>
-          <rect x="208" y="280" width="66" height="26" rx="6" fill="#EBF5EE"/>
-          <text x="241" y="296" text-anchor="middle" fill="#4A7C59" font-family="sans-serif" font-size="8" font-weight="600">📍 Local</text>
-          <!-- Menu header -->
-          <rect y="324" width="420" height="20" fill="#E8522A"/>
-          <text x="210" y="337" text-anchor="middle" fill="white" font-family="sans-serif" font-size="7" font-weight="700" letter-spacing="3">OUR MENU</text>
-          <!-- Filter tabs -->
-          <rect x="28" y="356" width="52" height="18" rx="9" fill="#E8522A"/>
-          <text x="54" y="368" text-anchor="middle" fill="white" font-family="sans-serif" font-size="7" font-weight="600">Coffee</text>
-          <text x="96" y="368" fill="#888" font-family="sans-serif" font-size="7">Smoothies</text>
-          <text x="158" y="368" fill="#888" font-family="sans-serif" font-size="7">Food</text>
-          <!-- Product cards -->
-          <rect x="28" y="386" width="108" height="84" rx="8" fill="white"/>
-          <rect x="28" y="386" width="108" height="46" rx="8" fill="#F2EAE4"/>
-          <text x="82" y="416" text-anchor="middle" font-size="22">☕</text>
-          <text x="82" y="450" text-anchor="middle" fill="#1a1a1a" font-family="sans-serif" font-size="8" font-weight="600">Flat White</text>
-          <text x="82" y="463" text-anchor="middle" fill="#888" font-family="sans-serif" font-size="7">$5.00</text>
-          <rect x="148" y="386" width="108" height="84" rx="8" fill="white"/>
-          <rect x="148" y="386" width="108" height="46" rx="8" fill="#F2EAE4"/>
-          <text x="202" y="416" text-anchor="middle" font-size="22">🧋</text>
-          <text x="202" y="450" text-anchor="middle" fill="#1a1a1a" font-family="sans-serif" font-size="8" font-weight="600">Cold Brew</text>
-          <text x="202" y="463" text-anchor="middle" fill="#888" font-family="sans-serif" font-size="7">$6.00</text>
-          <rect x="268" y="386" width="108" height="84" rx="8" fill="white"/>
-          <rect x="268" y="386" width="108" height="46" rx="8" fill="#F2EAE4"/>
-          <text x="322" y="416" text-anchor="middle" font-size="22">🥐</text>
-          <text x="322" y="450" text-anchor="middle" fill="#1a1a1a" font-family="sans-serif" font-size="8" font-weight="600">Croissant</text>
-          <text x="322" y="463" text-anchor="middle" fill="#888" font-family="sans-serif" font-size="7">$3.50</text>
-          <!-- Footer -->
-          <rect y="500" width="420" height="40" fill="#1a1a1a"/>
-          <text x="210" y="524" text-anchor="middle" fill="#666" font-family="sans-serif" font-size="7" letter-spacing="2">BANA CAFÉ · LEBANON</text>
+          <rect width="420" height="50" fill="rgba(15,23,42,0.97)"/>
+          <rect x="0" y="49" width="420" height="1" fill="#1e293b"/>
+          <text x="28" y="30" fill="#c8a96e" font-family="serif" font-size="16" font-weight="700" letter-spacing="4">BLCK</text>
+          <text x="300" y="27" fill="#475569" font-family="monospace" font-size="7" letter-spacing="1">Menu</text>
+          <text x="334" y="27" fill="#475569" font-family="monospace" font-size="7" letter-spacing="1">Find Us</text>
+          <text x="376" y="27" fill="#c8a96e" font-family="monospace" font-size="7" letter-spacing="1">Visit</text>
+          <!-- Hero text -->
+          <text x="28" y="132" fill="#f1f5f9" font-family="serif" font-size="60" font-weight="700" letter-spacing="4" opacity="0.96">BLCK</text>
+          <text x="28" y="168" fill="#c8a96e" font-family="monospace" font-size="11" letter-spacing="5">SPECIALTY COFFEE</text>
+          <text x="28" y="192" fill="#475569" font-family="monospace" font-size="9" font-style="italic">Kantari, Beirut &nbsp;·&nbsp; Respect the Beans.</text>
+          <rect x="28" y="210" width="106" height="30" fill="#c8a96e"/>
+          <text x="81" y="229" text-anchor="middle" fill="#0f172a" font-family="monospace" font-size="8" font-weight="700" letter-spacing="2">VIEW MENU</text>
+          <rect x="144" y="210" width="106" height="30" fill="transparent" stroke="#334155" stroke-width="1"/>
+          <text x="197" y="229" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8" letter-spacing="2">FIND US</text>
+          <!-- Section nav -->
+          <rect x="0" y="258" width="420" height="38" fill="rgba(15,23,42,0.95)"/>
+          <rect x="0" y="295" width="420" height="1" fill="#1e293b"/>
+          <rect x="20" y="270" width="58" height="16" rx="8" fill="#c8a96e"/>
+          <text x="49" y="281" text-anchor="middle" fill="#0f172a" font-family="monospace" font-size="7" font-weight="700">Coffee</text>
+          <text x="94" y="281" fill="#475569" font-family="monospace" font-size="7">Cold Drinks</text>
+          <text x="170" y="281" fill="#475569" font-family="monospace" font-size="7">Smoothies</text>
+          <text x="242" y="281" fill="#475569" font-family="monospace" font-size="7">Food</text>
+          <text x="282" y="281" fill="#475569" font-family="monospace" font-size="7">Bakery</text>
+          <!-- Menu items -->
+          <line x1="28" y1="318" x2="392" y2="318" stroke="#1e293b" stroke-width="0.75"/>
+          <text x="28" y="338" fill="#f1f5f9" font-family="sans-serif" font-size="11">Espresso</text>
+          <line x1="28" y1="350" x2="392" y2="350" stroke="#1e293b" stroke-width="0.5"/>
+          <text x="28" y="370" fill="#f1f5f9" font-family="sans-serif" font-size="11">Cappuccino</text>
+          <text x="28" y="384" fill="#475569" font-family="monospace" font-size="8">Double shot, silky microfoam</text>
+          <line x1="28" y1="394" x2="392" y2="394" stroke="#1e293b" stroke-width="0.5"/>
+          <text x="28" y="414" fill="#f1f5f9" font-family="sans-serif" font-size="11">Latte</text>
+          <line x1="28" y1="426" x2="392" y2="426" stroke="#1e293b" stroke-width="0.5"/>
+          <text x="28" y="446" fill="#f1f5f9" font-family="sans-serif" font-size="11">V60 Pour Over</text>
+          <text x="28" y="460" fill="#475569" font-family="monospace" font-size="8">Single origin, filter roast</text>
+          <line x1="28" y1="470" x2="392" y2="470" stroke="#1e293b" stroke-width="0.5"/>
+          <text x="28" y="490" fill="#f1f5f9" font-family="sans-serif" font-size="11">Cold Brew</text>
+          <line x1="28" y1="502" x2="392" y2="502" stroke="#1e293b" stroke-width="0.5"/>
         </svg>
         <div class="work-gradient"></div>
       </div>
       <div class="work-info">
-        <div class="w-cat">Caf&eacute; &middot; Lebanon</div>
-        <div class="w-title">Bana Caf&eacute;</div>
-        <div class="w-desc">Warm orange &amp; cream caf&eacute; site with Playfair Display typography, tabbed menu cards, and clean modern layout.</div>
+        <div class="w-cat">Specialty Coffee &middot; Beirut</div>
+        <div class="w-title">BLCK Specialty Coffee</div>
+        <div class="w-desc">Single-page menu site with sticky section navigation, smooth loader animation, and mobile-first responsive layout.</div>
         <div class="w-link">View Project &#8599;</div>
       </div>
     </div>
 
-    <!-- Oak -->
+    <!-- Ikigai — #4 fine dining -->
+    <div class="work-card" data-cat="restaurant" data-href="https://hsen308.github.io/ikigai/">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="ik-warm" cx="50%" cy="60%"><stop offset="0%" stop-color="#c9a961" stop-opacity="0.08"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          </defs>
+          <rect width="420" height="540" fill="#faf8f5"/>
+          <rect width="420" height="540" fill="url(#ik-warm)"/>
+          <!-- Header burgundy band -->
+          <rect width="420" height="108" fill="#5c1a1a"/>
+          <text x="210" y="44" text-anchor="middle" fill="#c9a961" font-family="serif" font-size="30" font-style="italic" letter-spacing="3">Ikigai</text>
+          <text x="210" y="62" text-anchor="middle" fill="rgba(201,169,97,0.55)" font-family="monospace" font-size="7" letter-spacing="6">FINE DINING</text>
+          <line x1="160" y1="76" x2="260" y2="76" stroke="#c9a961" stroke-width="0.5" opacity="0.4"/>
+          <text x="84" y="92" fill="rgba(201,169,97,0.45)" font-family="monospace" font-size="7" letter-spacing="1">Menu</text>
+          <text x="180" y="92" fill="rgba(201,169,97,0.45)" font-family="monospace" font-size="7" letter-spacing="1">Reservations</text>
+          <text x="302" y="92" fill="rgba(201,169,97,0.45)" font-family="monospace" font-size="7" letter-spacing="1">Find Us</text>
+          <!-- Hero section -->
+          <text x="210" y="156" text-anchor="middle" fill="#1a1410" font-family="serif" font-size="22" font-style="italic" letter-spacing="1">Our Menu</text>
+          <line x1="150" y1="168" x2="270" y2="168" stroke="#c9a961" stroke-width="0.75"/>
+          <text x="210" y="190" text-anchor="middle" fill="#9a8a7a" font-family="monospace" font-size="7" letter-spacing="3">BAGELS &amp; SALADS</text>
+          <!-- Menu items with descriptions -->
+          <line x1="36" y1="206" x2="384" y2="206" stroke="#e8d7b5" stroke-width="0.5"/>
+          <text x="36" y="225" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Halloumi Pesto Bagel</text>
+          <text x="36" y="241" fill="#9a8a7a" font-family="sans-serif" font-size="8">Halloumi, basil pesto, cherry tomato, arugula</text>
+          <line x1="36" y1="252" x2="384" y2="252" stroke="#e8d7b5" stroke-width="0.5"/>
+          <text x="36" y="271" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Smoked Salmon Bagel</text>
+          <text x="36" y="287" fill="#9a8a7a" font-family="sans-serif" font-size="8">Smoked salmon, cream cheese, capers, dill</text>
+          <line x1="36" y1="298" x2="384" y2="298" stroke="#e8d7b5" stroke-width="0.5"/>
+          <text x="36" y="317" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Smoked Chicken Caesar</text>
+          <text x="36" y="333" fill="#9a8a7a" font-family="sans-serif" font-size="8">Mixed greens, smoked chicken, parmesan, croutons</text>
+          <line x1="36" y1="344" x2="384" y2="344" stroke="#e8d7b5" stroke-width="0.5"/>
+          <text x="36" y="363" fill="#1a1410" font-family="serif" font-size="13" font-style="italic">Avocado &amp; Egg Bagel</text>
+          <text x="36" y="379" fill="#9a8a7a" font-family="sans-serif" font-size="8">Smashed avocado, soft egg, everything seasoning</text>
+          <line x1="36" y1="390" x2="384" y2="390" stroke="#e8d7b5" stroke-width="0.5"/>
+          <!-- Find us strip -->
+          <rect x="0" y="426" width="420" height="60" fill="#5c1a1a" opacity="0.06"/>
+          <rect x="36" y="438" width="30" height="0.75" fill="#c9a961"/>
+          <text x="36" y="460" fill="#5c1a1a" font-family="serif" font-size="12" font-style="italic">Find Us in Beirut</text>
+          <text x="36" y="478" fill="#9a8a7a" font-family="monospace" font-size="7" letter-spacing="1">Open Daily &nbsp; 8:00 AM &mdash; 10:00 PM</text>
+          <!-- Footer -->
+          <rect x="0" y="510" width="420" height="30" fill="#5c1a1a"/>
+          <text x="210" y="529" text-anchor="middle" fill="rgba(201,169,97,0.5)" font-family="monospace" font-size="7" letter-spacing="3">IKIGAI · BEIRUT</text>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Fine Dining &middot; Beirut</div>
+        <div class="w-title">Ikigai</div>
+        <div class="w-desc">Premium restaurant site with elegant cream &amp; burgundy palette, Cormorant serif typography, and refined scroll reveal animations.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+    <!-- Oak — #5 minimalist -->
     <div class="work-card" data-cat="cafe" data-href="https://oakcafe.vercel.app">
       <div class="work-img">
         <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="oak-hero" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7a3a4a"/><stop offset="100%" stop-color="#5c2a36"/></linearGradient>
+          </defs>
           <rect width="420" height="540" fill="#F5EDE5"/>
-          <rect width="420" height="60" fill="#F5EDE5"/>
-          <text x="210" y="36" text-anchor="middle" fill="#2a2a2a" font-family="serif" font-size="20" font-weight="300" letter-spacing="8">oak</text>
-          <defs><linearGradient id="oak-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8B4655" stop-opacity="0.9"/><stop offset="100%" stop-color="#6d3542" stop-opacity="0.85"/></linearGradient></defs>
-          <rect y="60" width="420" height="200" fill="url(#oak-g)"/>
-          <text x="36" y="135" fill="#E5D5C8" font-family="serif" font-size="44" font-weight="200" letter-spacing="2">Grow</text>
-          <text x="36" y="185" fill="#E5D5C8" font-family="serif" font-size="44" font-weight="200" letter-spacing="2">Wild.</text>
-          <text x="36" y="228" fill="rgba(229,213,200,0.6)" font-family="monospace" font-size="9" letter-spacing="3">SIP SLOW</text>
-          <text x="36" y="300" fill="#2a2a2a" font-family="serif" font-size="18" font-weight="300">Menu</text>
+          <!-- Nav -->
+          <rect width="420" height="54" fill="#F5EDE5"/>
+          <text x="210" y="32" text-anchor="middle" fill="#2a2a2a" font-family="serif" font-size="18" font-weight="300" letter-spacing="10">oak</text>
+          <text x="210" y="46" text-anchor="middle" fill="#b8a898" font-family="monospace" font-size="6" letter-spacing="4">CAFÉ &amp; BAR</text>
+          <!-- Hero burgundy -->
+          <rect y="54" width="420" height="210" fill="url(#oak-hero)"/>
+          <text x="36" y="128" fill="#E5D5C8" font-family="serif" font-size="50" font-weight="200" letter-spacing="1" opacity="0.95">Grow</text>
+          <text x="36" y="180" fill="#E5D5C8" font-family="serif" font-size="50" font-weight="200" letter-spacing="1" opacity="0.95">Wild.</text>
+          <text x="36" y="220" fill="rgba(229,213,200,0.5)" font-family="monospace" font-size="8" letter-spacing="4">SIP SLOW · STAY LONG</text>
+          <rect x="36" y="236" width="96" height="26" rx="13" fill="transparent" stroke="rgba(229,213,200,0.4)" stroke-width="1"/>
+          <text x="84" y="253" text-anchor="middle" fill="#E5D5C8" font-family="monospace" font-size="7" letter-spacing="2">EXPLORE</text>
+          <!-- Menu section -->
+          <text x="36" y="300" fill="#2a2a2a" font-family="serif" font-size="18" font-weight="300" letter-spacing="2">Menu</text>
           <line x1="36" y1="316" x2="384" y2="316" stroke="#D4C4B6" stroke-width="1"/>
-          <text x="36" y="344" fill="#2a2a2a" font-family="serif" font-size="12">Natural Wine Selection</text>
-          <line x1="36" y1="360" x2="384" y2="360" stroke="#D4C4B6" stroke-width="0.5"/>
-          <text x="36" y="388" fill="#2a2a2a" font-family="serif" font-size="12">Craft Beer</text>
-          <line x1="36" y1="404" x2="384" y2="404" stroke="#D4C4B6" stroke-width="0.5"/>
-          <text x="36" y="432" fill="#2a2a2a" font-family="serif" font-size="12">Specialty Coffee</text>
-          <line x1="36" y1="448" x2="384" y2="448" stroke="#D4C4B6" stroke-width="0.5"/>
-          <rect x="36" y="476" width="130" height="28" rx="14" fill="transparent" stroke="#8B4655" stroke-width="1"/>
-          <text x="101" y="494" text-anchor="middle" fill="#8B4655" font-family="monospace" font-size="8" letter-spacing="2">FIND US</text>
+          <text x="36" y="342" fill="#2a2a2a" font-family="serif" font-size="12" font-weight="300">Natural Wine Selection</text>
+          <text x="36" y="356" fill="#b8a898" font-family="monospace" font-size="7">Curated imports &amp; local labels</text>
+          <line x1="36" y1="368" x2="384" y2="368" stroke="#D4C4B6" stroke-width="0.5"/>
+          <text x="36" y="394" fill="#2a2a2a" font-family="serif" font-size="12" font-weight="300">Craft Beer</text>
+          <text x="36" y="408" fill="#b8a898" font-family="monospace" font-size="7">Local &amp; imported draughts</text>
+          <line x1="36" y1="420" x2="384" y2="420" stroke="#D4C4B6" stroke-width="0.5"/>
+          <text x="36" y="446" fill="#2a2a2a" font-family="serif" font-size="12" font-weight="300">Specialty Coffee</text>
+          <text x="36" y="460" fill="#b8a898" font-family="monospace" font-size="7">Single origin, filter &amp; espresso</text>
+          <line x1="36" y1="472" x2="384" y2="472" stroke="#D4C4B6" stroke-width="0.5"/>
+          <!-- CTA -->
+          <rect x="36" y="494" width="120" height="26" rx="13" fill="transparent" stroke="#8B4655" stroke-width="1"/>
+          <text x="96" y="511" text-anchor="middle" fill="#8B4655" font-family="monospace" font-size="7" letter-spacing="2">FIND US</text>
         </svg>
         <div class="work-gradient"></div>
       </div>
       <div class="work-info">
         <div class="w-cat">Caf&eacute; &amp; Bar</div>
         <div class="w-title">Oak</div>
-        <div class="w-desc">Minimalist caf&eacute;/bar site with warm cream &amp; burgundy palette, light loading animation, and soft organic typography.</div>
+        <div class="w-desc">Minimalist caf&eacute;/bar site with warm cream &amp; burgundy palette, organic serif typography, and a quietly confident visual identity.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+    <!-- Bana Cafe — #6 -->
+    <div class="work-card" data-cat="cafe" data-href="https://hsen308.github.io/bana-cafe/">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <rect width="420" height="540" fill="#FFF8F5"/>
+          <!-- Nav -->
+          <rect width="420" height="52" fill="white"/>
+          <rect x="0" y="51" width="420" height="1" fill="#f0e0d6"/>
+          <circle cx="36" cy="26" r="13" fill="none" stroke="#E8522A" stroke-width="1.5"/>
+          <text x="36" y="31" text-anchor="middle" fill="#E8522A" font-family="serif" font-size="13" font-weight="700">B</text>
+          <text x="116" y="30" fill="#444" font-family="sans-serif" font-size="7.5" letter-spacing="0.5">Menu</text>
+          <text x="154" y="30" fill="#444" font-family="sans-serif" font-size="7.5" letter-spacing="0.5">About</text>
+          <text x="196" y="30" fill="#444" font-family="sans-serif" font-size="7.5" letter-spacing="0.5">Find Us</text>
+          <rect x="318" y="14" width="76" height="24" rx="12" fill="#E8522A"/>
+          <text x="356" y="30" text-anchor="middle" fill="white" font-family="sans-serif" font-size="7.5" font-weight="700">Order Now</text>
+          <!-- Hero -->
+          <rect y="52" width="420" height="200" fill="#E8522A"/>
+          <circle cx="360" cy="152" r="100" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+          <circle cx="360" cy="152" r="64" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <text x="36" y="118" fill="white" font-family="serif" font-size="50" font-weight="700" letter-spacing="-1">Bana</text>
+          <text x="36" y="168" fill="white" font-family="serif" font-size="50" font-weight="700" letter-spacing="-1">Café</text>
+          <text x="36" y="193" fill="rgba(255,255,255,0.60)" font-family="sans-serif" font-size="8" letter-spacing="2">SPECIALTY COFFEE &amp; MORE</text>
+          <rect x="36" y="206" width="86" height="26" rx="13" fill="white"/>
+          <text x="79" y="222" text-anchor="middle" fill="#E8522A" font-family="sans-serif" font-size="8" font-weight="700">Our Menu</text>
+          <!-- Feature bar -->
+          <rect y="252" width="420" height="56" fill="#F5EBE5"/>
+          <rect x="28" y="268" width="70" height="24" rx="5" fill="#FFF" stroke="#E8D0C4" stroke-width="0.75"/>
+          <text x="63" y="283" text-anchor="middle" fill="#6a4a3a" font-family="sans-serif" font-size="8">🌿 Fresh</text>
+          <rect x="108" y="268" width="96" height="24" rx="5" fill="#FFF" stroke="#E8D0C4" stroke-width="0.75"/>
+          <text x="156" y="283" text-anchor="middle" fill="#6a4a3a" font-family="sans-serif" font-size="8">✦ Handcrafted</text>
+          <rect x="214" y="268" width="70" height="24" rx="5" fill="#FFF" stroke="#E8D0C4" stroke-width="0.75"/>
+          <text x="249" y="283" text-anchor="middle" fill="#6a4a3a" font-family="sans-serif" font-size="8">📍 Local</text>
+          <!-- Menu cards -->
+          <rect y="308" width="420" height="18" fill="#E8522A"/>
+          <text x="210" y="320" text-anchor="middle" fill="white" font-family="sans-serif" font-size="7" font-weight="700" letter-spacing="3">OUR MENU</text>
+          <rect x="28" y="340" width="52" height="16" rx="8" fill="#E8522A"/>
+          <text x="54" y="351" text-anchor="middle" fill="white" font-family="sans-serif" font-size="7">Coffee</text>
+          <text x="92" y="351" fill="#999" font-family="sans-serif" font-size="7">Smoothies</text>
+          <text x="152" y="351" fill="#999" font-family="sans-serif" font-size="7">Food</text>
+          <rect x="28" y="370" width="106" height="80" rx="8" fill="white"/>
+          <rect x="28" y="370" width="106" height="44" rx="8" fill="#FFF0EB"/>
+          <text x="81" y="398" text-anchor="middle" font-size="22">☕</text>
+          <text x="81" y="432" text-anchor="middle" fill="#1a1a1a" font-family="sans-serif" font-size="8" font-weight="600">Flat White</text>
+          <rect x="146" y="370" width="106" height="80" rx="8" fill="white"/>
+          <rect x="146" y="370" width="106" height="44" rx="8" fill="#FFF0EB"/>
+          <text x="199" y="398" text-anchor="middle" font-size="22">🧋</text>
+          <text x="199" y="432" text-anchor="middle" fill="#1a1a1a" font-family="sans-serif" font-size="8" font-weight="600">Cold Brew</text>
+          <rect x="264" y="370" width="106" height="80" rx="8" fill="white"/>
+          <rect x="264" y="370" width="106" height="44" rx="8" fill="#FFF0EB"/>
+          <text x="317" y="398" text-anchor="middle" font-size="22">🥐</text>
+          <text x="317" y="432" text-anchor="middle" fill="#1a1a1a" font-family="sans-serif" font-size="8" font-weight="600">Croissant</text>
+          <!-- Footer -->
+          <rect y="500" width="420" height="40" fill="#1a1a1a"/>
+          <text x="210" y="524" text-anchor="middle" fill="#555" font-family="monospace" font-size="7" letter-spacing="2">BANA CAFÉ · LEBANON</text>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Caf&eacute; &middot; Lebanon</div>
+        <div class="w-title">Bana Caf&eacute;</div>
+        <div class="w-desc">Warm orange &amp; cream caf&eacute; site with bold hero, tabbed menu cards, and a clean modern layout with personality.</div>
+        <div class="w-link">View Project &#8599;</div>
+      </div>
+    </div>
+
+    <!-- Daraj — #7 -->
+    <div class="work-card" data-cat="cafe" data-href="https://hsen308.github.io/daraj/">
+      <div class="work-img">
+        <svg width="100%" height="100%" viewBox="0 0 420 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="dj-glow" cx="60%" cy="30%"><stop offset="0%" stop-color="#9C5BFF" stop-opacity="0.22"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+            <radialGradient id="dj-glow2" cx="20%" cy="80%"><stop offset="0%" stop-color="#B88AFF" stop-opacity="0.14"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          </defs>
+          <rect width="420" height="540" fill="#0e0818"/>
+          <rect width="420" height="540" fill="url(#dj-glow)"/>
+          <rect width="420" height="540" fill="url(#dj-glow2)"/>
+          <!-- Decorative corner geometry -->
+          <line x1="0" y1="0" x2="60" y2="0" stroke="#9C5BFF" stroke-width="0.75" opacity="0.4"/>
+          <line x1="0" y1="0" x2="0" y2="60" stroke="#9C5BFF" stroke-width="0.75" opacity="0.4"/>
+          <line x1="420" y1="540" x2="360" y2="540" stroke="#9C5BFF" stroke-width="0.75" opacity="0.4"/>
+          <line x1="420" y1="540" x2="420" y2="480" stroke="#9C5BFF" stroke-width="0.75" opacity="0.4"/>
+          <!-- Nav -->
+          <rect width="420" height="52" fill="rgba(14,8,24,0.9)"/>
+          <text x="210" y="28" text-anchor="middle" fill="#D3B3FF" font-family="serif" font-size="16" font-style="italic" letter-spacing="4">Daraj</text>
+          <text x="210" y="42" text-anchor="middle" fill="rgba(156,91,255,0.5)" font-family="monospace" font-size="6" letter-spacing="5">MAR MIKHAEL</text>
+          <text x="306" y="28" fill="rgba(211,179,255,0.35)" font-family="monospace" font-size="7" letter-spacing="1">Menu</text>
+          <text x="342" y="28" fill="rgba(211,179,255,0.35)" font-family="monospace" font-size="7" letter-spacing="1">Story</text>
+          <text x="378" y="28" fill="rgba(211,179,255,0.35)" font-family="monospace" font-size="7" letter-spacing="1">Visit</text>
+          <!-- Hero -->
+          <text x="36" y="130" fill="#FCFAFF" font-family="serif" font-size="52" font-style="italic" font-weight="400" letter-spacing="-0.5" opacity="0.95">Slow</text>
+          <text x="36" y="188" fill="#FCFAFF" font-family="serif" font-size="52" font-style="italic" font-weight="400" letter-spacing="-0.5" opacity="0.95">Coffee.</text>
+          <text x="36" y="218" fill="#D3B3FF" font-family="serif" font-size="52" font-style="italic" font-weight="400" letter-spacing="-0.5">Done Right.</text>
+          <line x1="36" y1="236" x2="120" y2="236" stroke="#9C5BFF" stroke-width="0.75"/>
+          <text x="36" y="256" fill="rgba(211,179,255,0.5)" font-family="monospace" font-size="7" letter-spacing="3">SPECIALTY · BEIRUT</text>
+          <rect x="36" y="270" width="100" height="28" rx="14" fill="#9C5BFF"/>
+          <text x="86" y="288" text-anchor="middle" fill="white" font-family="monospace" font-size="7" letter-spacing="2">EXPLORE</text>
+          <rect x="148" y="270" width="100" height="28" rx="14" fill="transparent" stroke="rgba(156,91,255,0.4)" stroke-width="1"/>
+          <text x="198" y="288" text-anchor="middle" fill="#B88AFF" font-family="monospace" font-size="7" letter-spacing="2">OUR STORY</text>
+          <!-- Menu section -->
+          <rect x="0" y="316" width="420" height="1" fill="rgba(156,91,255,0.2)"/>
+          <text x="36" y="342" fill="rgba(156,91,255,0.6)" font-family="monospace" font-size="7" letter-spacing="4">ESPRESSO</text>
+          <line x1="36" y1="352" x2="384" y2="352" stroke="rgba(156,91,255,0.15)" stroke-width="0.75"/>
+          <text x="36" y="372" fill="#e8e0f8" font-family="serif" font-size="13" font-style="italic">Single Origin Espresso</text>
+          <text x="36" y="387" fill="rgba(184,138,255,0.5)" font-family="sans-serif" font-size="8">Washed Ethiopian · bright &amp; floral</text>
+          <line x1="36" y1="396" x2="384" y2="396" stroke="rgba(156,91,255,0.1)" stroke-width="0.5"/>
+          <text x="36" y="416" fill="#e8e0f8" font-family="serif" font-size="13" font-style="italic">V60 Pour Over</text>
+          <text x="36" y="431" fill="rgba(184,138,255,0.5)" font-family="sans-serif" font-size="8">Filter roast · clean &amp; nuanced</text>
+          <line x1="36" y1="440" x2="384" y2="440" stroke="rgba(156,91,255,0.1)" stroke-width="0.5"/>
+          <text x="36" y="460" fill="#e8e0f8" font-family="serif" font-size="13" font-style="italic">Cold Brew</text>
+          <text x="36" y="475" fill="rgba(184,138,255,0.5)" font-family="sans-serif" font-size="8">18-hour steep · smooth &amp; bold</text>
+          <line x1="36" y1="484" x2="384" y2="484" stroke="rgba(156,91,255,0.1)" stroke-width="0.5"/>
+          <!-- Subtle glow orb -->
+          <circle cx="380" cy="180" r="55" fill="#9C5BFF" opacity="0.06"/>
+          <circle cx="380" cy="180" r="30" fill="#9C5BFF" opacity="0.05"/>
+          <!-- Footer -->
+          <rect x="0" y="510" width="420" height="30" fill="rgba(9,5,18,0.8)"/>
+          <text x="210" y="529" text-anchor="middle" fill="rgba(156,91,255,0.4)" font-family="monospace" font-size="7" letter-spacing="3">DARAJ · MAR MIKHAEL · BEIRUT</text>
+        </svg>
+        <div class="work-gradient"></div>
+      </div>
+      <div class="work-info">
+        <div class="w-cat">Specialty Coffee &middot; Beirut</div>
+        <div class="w-title">Daraj</div>
+        <div class="w-desc">Luxury minimalist coffee shop site with lavender &amp; deep purple palette, Cormorant Garamond, glassmorphism effects, and cinematic scroll animations.</div>
         <div class="w-link">View Project &#8599;</div>
       </div>
     </div>
@@ -930,6 +1107,14 @@
       <div class="faq-question">Do you work outside Lebanon?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
       <div class="faq-body"><div class="faq-body-inner">Yes, 100% remote and worldwide. We&rsquo;ve worked with clients in Lebanon, the Gulf, Europe, and beyond. Communication happens over WhatsApp or email &mdash; wherever you are, we can work with you.</div></div>
     </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer SEO services?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
+      <div class="faq-body"><div class="faq-body-inner">Yes &mdash; every site we build is SEO-ready by default with clean structure, fast load times, and proper meta tags. We also offer a full SEO service: on-page optimization, local SEO, Google Business Profile setup, and ongoing keyword strategy. If you want your site to rank, we make it rank.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you work with hotels and hospitality businesses?<span class="faq-toggle"><svg viewBox="0 0 14 14" fill="none" stroke="var(--off)" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span></div>
+      <div class="faq-body"><div class="faq-body-inner">Absolutely. We specialize in the hospitality sector &mdash; restaurants, caf&eacute;s, hotels, bars, resorts, and food brands. We understand the visual standards this industry demands, and we build sites that reflect the premium experience your guests expect before they even walk through the door.</div></div>
+    </div>
   </div>
 </section>
 
@@ -963,14 +1148,14 @@
   <div class="about-right">
     <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span>// Who We Are</span></div>
     <div class="about-title">WE ARE<br><span class="lime">NOVU</span><br>STUDIOS</div>
-    <p class="about-body">Novu Studios is a web design studio based in Lebanon that builds custom digital experiences for businesses that care about how they look online.</p>
+    <p class="about-body">Novu Studios is a web design studio that builds custom digital experiences for restaurants, caf&eacute;s, hotels, and hospitality brands worldwide &mdash; for businesses that care about how they look online.</p>
     <p class="about-body">We don&rsquo;t use templates. We don&rsquo;t use page builders. Every line of code is written by hand, every design is made from scratch &mdash; because your business deserves to stand out, not blend in with thousands of identical sites.</p>
     <p class="about-body">Fast turnaround, premium quality, and a team that stays close after launch. That&rsquo;s the Novu promise.</p>
     <div class="about-tags">
       <span class="about-tag">Custom Code</span>
       <span class="about-tag">No Templates</span>
       <span class="about-tag">Mobile First</span>
-      <span class="about-tag">Fast Loading</span>
+      <span class="about-tag">SEO Optimized</span>
       <span class="about-tag">48h Delivery</span>
       <span class="about-tag">Worldwide</span>
       <span class="about-tag">Lebanon &#127758;</span>
@@ -1021,9 +1206,10 @@
     <div>
       <div class="footer-col-title">Services</div>
       <div class="footer-col-links">
-        <a href="#services" class="footer-link">Restaurant Websites</a>
+        <a href="#services" class="footer-link">Hospitality Websites</a>
         <a href="#services" class="footer-link">Digital Menus</a>
         <a href="#services" class="footer-link">Landing Pages</a>
+        <a href="#services" class="footer-link">SEO &amp; Google Visibility</a>
         <a href="#services" class="footer-link">Brand Identity</a>
         <a href="#services" class="footer-link">Maintenance</a>
       </div>
