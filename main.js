@@ -188,6 +188,31 @@ window.addEventListener('scroll', () => {
       }
     }
 
+    // Mesh — connect nearby dots with faint lines (limited window for perf)
+    if (!isTouch) {
+      const MESH_DIST = 90;
+      const MESH_DIST_SQ = MESH_DIST * MESH_DIST;
+      const colsPerScreen = Math.ceil(canvas.width  / (isTouch ? 58 : 46));
+      const maxJ = Math.min(colsPerScreen * 2 + 4, 40);
+      for (let i = 0; i < dots.length; i++) {
+        for (let j = i + 1; j <= Math.min(i + maxJ, dots.length - 1); j++) {
+          const dx = dots[i].x - dots[j].x;
+          if (Math.abs(dx) > MESH_DIST) continue;
+          const dy = dots[i].y - dots[j].y;
+          const d2 = dx * dx + dy * dy;
+          if (d2 < MESH_DIST_SQ) {
+            const alpha = (1 - Math.sqrt(d2) / MESH_DIST) * (isDark ? 0.065 : 0.035);
+            ctx.beginPath();
+            ctx.moveTo(dots[i].x, dots[i].y);
+            ctx.lineTo(dots[j].x, dots[j].y);
+            ctx.strokeStyle = isDark ? `rgba(200,255,0,${alpha})` : `rgba(90,150,0,${alpha})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
     // Dots
     dots.forEach(d => {
       const dx   = mouse.x - d.ox;
@@ -237,7 +262,7 @@ window.addEventListener('scroll', () => {
 (function initTypewriter() {
   const el = document.getElementById('typewriter');
   if (!el) return;
-  const words  = ['RESTAURANTS', 'CAFÉS', 'BUSINESSES', 'BRANDS'];
+  const words  = ['RESTAURANTS', 'CAFÉS', 'HOTELS', 'BUSINESSES', 'BRANDS', 'HOSPITALITY'];
   let wi = 0, ci = 0, deleting = false;
   const speed  = { type: 90, delete: 55, pause: 1800 };
 
