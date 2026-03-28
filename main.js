@@ -411,7 +411,11 @@ if (!isTouch) {
   document.querySelectorAll('.work-card[data-href]').forEach(card => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', () => {
-      window.open(card.dataset.href, '_blank', 'noopener');
+      if (isTouch) {
+        window.location.href = card.dataset.href;
+      } else {
+        window.open(card.dataset.href, '_blank', 'noopener');
+      }
     });
   });
 
