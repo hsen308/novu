@@ -411,11 +411,8 @@ if (!isTouch) {
   document.querySelectorAll('.work-card[data-href]').forEach(card => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', () => {
-      if (isTouch) {
-        window.location.href = card.dataset.href;
-      } else {
-        window.open(card.dataset.href, '_blank', 'noopener');
-      }
+     window.open(card.dataset.href, '_blank', 'noopener');
+      
     });
   });
 
@@ -627,11 +624,7 @@ if (!isTouch) {
 // Click to open — ALL devices
 document.querySelectorAll('.work-card[data-href]').forEach(card => {
   card.addEventListener('click', () => {
-    if (isTouch) {
-      window.location.href = card.dataset.href;
-    } else {
-      window.open(card.dataset.href, '_blank', 'noopener');
-    }
+   window.open(card.dataset.href, '_blank', 'noopener');
   });
 });
 
