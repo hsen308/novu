@@ -328,7 +328,7 @@ html[data-theme="light"] .footer-brand rect:first-child { stroke: var(--border-m
 #hero {
   height: 100vh; min-height: 680px;
   display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 0 52px 80px;
+  padding: 90px 52px 80px;
   position: relative; overflow: hidden;
 }
 #hero-canvas { position: absolute; inset: 0; z-index: 0; }
@@ -377,8 +377,7 @@ html[data-theme="light"] .footer-brand rect:first-child { stroke: var(--border-m
 
 /* Rotating badge */
 .hero-badge {
-  position: absolute; right: 52px; top: 50%;
-  transform: translateY(-50%);
+  position: absolute; right: 52px; top: 110px;
   width: 140px; height: 140px;
   opacity: 0; z-index: 2;
 }
@@ -563,7 +562,7 @@ html[data-theme="light"] .footer-brand rect:first-child { stroke: var(--border-m
 .service-item:hover { padding-left: 8px; }
 .service-num {
   font-family: 'Space Mono', monospace; font-size: 9px;
-  color: var(--muted); letter-spacing: 0.1em;
+  color: rgba(200,255,0,0.35); letter-spacing: 0.1em;
 }
 /* SVG icon in service */
 .service-icon {
@@ -1104,7 +1103,7 @@ footer::before {
   #nav { padding: 16px 22px; }
   #nav.stuck { padding: 11px 22px; }
   .nav-right .nav-link, .nav-avail { display: none; }
-  #hero { padding: 0 22px 60px; }
+  #hero { padding: 90px 22px 60px; }
   .hero-stats, .hero-badge { display: none; }
   .hero-scroll { left: 22px; }
   .section { padding: 80px 22px; }
